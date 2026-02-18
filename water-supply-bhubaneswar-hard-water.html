@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="canonical" href="https://valuelayer.in/" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>Water Supply in Bhubaneswar: Is It Hard Water? (And Solutions) | ValueLayer</title>
+  <meta name="description" content="Verified February 2026: TDS readings from 6 zones across Bhubaneswar, what hard water does to your geyser and hair, which purifier you actually need (UV vs RO), and real costs — all based on ground testing." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+
+    /* ── TDS Meter cards (readings by area) ── */
+    .tds-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 18px 0 28px;
+    }
+    .tds-card {
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      background: var(--card);
+      overflow: hidden;
+    }
+    .tds-card-header {
+      padding: 11px 14px 9px;
+      border-bottom: 1px solid var(--rule);
+      background: #fafaf8;
+    }
+    .tds-card-header .tc-area {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+    .tds-card-header .tc-source {
+      font-size: 0.72rem;
+      color: var(--muted);
+      font-weight: 400;
+    }
+    .tds-card-body {
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .tds-reading {
+      font-family: 'Lora', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      line-height: 1;
+    }
+    .tds-reading.safe     { color: #2a7a2a; }
+    .tds-reading.moderate { color: #c8561a; }
+    .tds-reading.high     { color: #a83010; }
+    .tds-verdict {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 4px 9px;
+      border-radius: 3px;
+      white-space: nowrap;
+      text-align: center;
+    }
+    .tds-verdict.safe     { background: #d4f0d4; color: #2a7a2a; }
+    .tds-verdict.moderate { background: #fdf0e0; color: #8a5a20; }
+    .tds-verdict.high     { background: #fde8e0; color: #a83010; }
+
+    /* ── Signs of hard water checklist ── */
+    .signs-list {
+      display: grid;
+      gap: 10px;
+      margin: 16px 0 26px;
+    }
+    .sign-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+    .sign-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      width: 36px;
+      text-align: center;
+      padding-top: 2px;
+    }
+    .sign-content { flex: 1; }
+    .sign-content strong {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+    .sign-content p {
+      font-size: 0.84rem;
+      color: var(--ink-soft);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* ── Purifier recommendation cards ── */
+    .purifier-zone {
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      background: var(--card);
+      overflow: hidden;
+      margin: 0 0 22px;
+    }
+    .purifier-zone-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 22px 14px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .purifier-zone-header.soft  { background: #eef8ee; }
+    .purifier-zone-header.hard  { background: #fff2ec; }
+    .purifier-zone-header.mixed { background: #eef4fa; }
+    .purifier-zone-header.tanker{ background: #f8f4ec; }
+    .pz-badge {
+      width: 42px; height: 42px; min-width: 42px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .pz-badge.soft  { background: #2a7a2a; }
+    .pz-badge.hard  { background: #c8561a; }
+    .pz-badge.mixed { background: #3a6a9a; }
+    .pz-badge.tanker{ background: #7a6a2a; }
+    .pz-info { flex: 1; }
+    .pz-info h3 {
+      font-size: 0.97rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 0 0 3px;
+    }
+    .pz-info .pz-areas { font-size: 0.78rem; color: var(--muted); font-weight: 400; }
+    .pz-tag {
+      font-size: 0.67rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 5px 12px;
+      border-radius: 3px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .pz-tag.soft  { background: #d4f0d4; color: #2a7a2a; }
+    .pz-tag.hard  { background: #fde8e0; color: #a83010; }
+    .pz-tag.mixed { background: #ddeeff; color: #3a6a9a; }
+    .pz-tag.tanker{ background: #f8f0e0; color: #7a6a2a; }
+    .purifier-zone-body { padding: 18px 22px; }
+    .purifier-zone-body > p { font-size: 0.9rem; margin-bottom: 14px; line-height: 1.8; }
+
+    /* ── Purifier model cards (inside zone) ── */
+    .model-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 4px;
+    }
+    .model-card {
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 14px 16px;
+      background: #fafaf8;
+    }
+    .model-card .mc-name {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+    .model-card .mc-type {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .model-card .mc-price {
+      font-family: 'Lora', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+    .model-card .mc-why {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+    .model-card.recommended {
+      border-color: var(--accent);
+      background: var(--accent-lt);
+    }
+    .model-card.recommended .mc-name::after {
+      content: " ★";
+      color: var(--accent);
+    }
+
+    /* ── AMC cost table ── */
+    .cost-breakdown {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 16px 0 26px;
+    }
+    .cost-col {
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--card);
+    }
+    .cost-col-header {
+      padding: 12px 16px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      border-bottom: 1px solid var(--rule);
+    }
+    .cost-col-header.uv  { background: #eef8ee; color: #2a7a2a; }
+    .cost-col-header.ro  { background: #fff2ec; color: #c8561a; }
+    .cost-col table {
+      width: 100%;
+      font-size: 0.83rem;
+      border-collapse: collapse;
+    }
+    .cost-col table td {
+      padding: 9px 16px;
+      border-bottom: 1px solid var(--rule);
+      color: var(--ink-soft);
+    }
+    .cost-col table tr:last-child td { border-bottom: none; }
+    .cost-col table td:last-child { color: var(--accent); font-weight: 600; text-align: right; }
+    .cost-col table .total-row td { font-weight: 700; color: var(--ink); background: #f8f8f5; }
+    .cost-col table .total-row td:last-child { color: var(--ink); }
+
+    /* ── Hard water solutions list ── */
+    .solution-list {
+      display: grid;
+      gap: 11px;
+      margin: 16px 0 28px;
+    }
+    .solution-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+    }
+    .solution-item .sol-icon { font-size: 1.3rem; flex-shrink: 0; width: 32px; text-align: center; }
+    .solution-item .sol-body { flex: 1; font-size: 0.88rem; line-height: 1.75; color: var(--ink-soft); }
+    .solution-item .sol-body strong { color: var(--ink); font-weight: 600; display: block; margin-bottom: 3px; font-size: 0.9rem; }
+    .solution-item .sol-cost {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #2a7a2a;
+      background: #d4f0d4;
+      border-radius: 3px;
+      padding: 2px 8px;
+      margin-top: 6px;
+      display: inline-block;
+    }
+
+    /* ── Source type header blocks ── */
+    .source-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+      margin: 22px 0 28px;
+    }
+    .source-block {
+      border-radius: 8px;
+      border: 1.5px solid var(--rule);
+      background: var(--card);
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .source-block.phed   { border-color: #2a7a2a; }
+    .source-block.bore   { border-color: #c8561a; }
+    .source-block.tanker { border-color: #7a6a2a; }
+    .source-block .sb-icon { font-size: 1.6rem; margin-bottom: 8px; }
+    .source-block .sb-name { font-size: 0.82rem; font-weight: 600; color: var(--ink); margin-bottom: 5px; }
+    .source-block .sb-areas { font-size: 0.72rem; color: var(--accent); font-weight: 500; margin-bottom: 7px; }
+    .source-block.phed .sb-areas  { color: #2a7a2a; }
+    .source-block.bore .sb-areas  { color: #c8561a; }
+    .source-block.tanker .sb-areas{ color: #7a6a2a; }
+    .source-block p { font-size: 0.78rem; color: var(--muted); line-height: 1.65; margin: 0; }
+
+    /* ── Quick ref table ── */
+    .purifier-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.81rem;
+      margin: 18px 0 34px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--rule);
+    }
+    .purifier-table thead tr { background: var(--ink); }
+    .purifier-table th {
+      color: #fff;
+      padding: 12px 14px;
+      text-align: left;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      font-size: 0.77rem;
+    }
+    .purifier-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--rule);
+      vertical-align: middle;
+      line-height: 1.5;
+    }
+    .purifier-table tr:last-child td { border-bottom: none; }
+    .purifier-table tr:nth-child(even) td { background: #f7f7f4; }
+    .purifier-table td:first-child { font-weight: 600; color: var(--ink); }
+    .purifier-table .cell-green  { color: #2a7a2a; font-weight: 600; }
+    .purifier-table .cell-orange { color: #c8561a; font-weight: 600; }
+    .purifier-table .cell-red    { color: #a83010; font-weight: 600; }
+    .purifier-table .cell-price  { font-weight: 600; color: var(--ink); white-space: nowrap; }
+
+    @media (max-width: 700px) {
+      .tds-grid       { grid-template-columns: 1fr 1fr; }
+      .model-cards    { grid-template-columns: 1fr; }
+      .cost-breakdown { grid-template-columns: 1fr; }
+      .source-header  { grid-template-columns: 1fr; }
+      .purifier-table { font-size: 0.72rem; }
+      .purifier-table th, .purifier-table td { padding: 8px 8px; }
+    }
+  </style>
+</head>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://valuelayer.in"
+    }]
+  }
+  </script>
+<body>
+
+<!-- ══════════════════════════════════════════════════ HEADER -->
+<header class="site-header">
+  <div class="header-top">
+    <a href="index.html" class="site-logo">Value<span>Layer</span></a>
+    <div class="site-tagline">The Bhubaneswar Guide</div>
+  </div>
+  <nav class="header-nav">
+    <div class="nav-links">
+      <a href="city-living.html">City Living &amp; Housing</a>
+      <a href="education.html">Education &amp; Career</a>
+      <a href="lifestyle.html">Explore &amp; Lifestyle</a>
+      <a href="services.html" class="active">Services &amp; Utilities</a>
+      <a href="transport.html">Transport &amp; Travel</a>
+    </div>
+    <button class="search-btn" aria-label="Search">&#9906;</button>
+  </nav>
+</header>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="index.html">Home</a>
+  <span class="sep">›</span>
+  <a href="services.html">Services &amp; Utilities</a>
+  <span class="sep">›</span>
+  <span>Water Supply in Bhubaneswar: Is It Hard Water?</span>
+</div>
+
+<!-- ══════════════════════════════════════════════════ HERO -->
+<div class="article-hero">
+  <span class="hero-tag">Services &amp; Utilities · Water Quality</span>
+  <h1>Water Supply in Bhubaneswar: Is It Hard Water? (And Solutions)</h1>
+  <div class="hero-meta">
+    <span>📅 February 17, 2026</span>
+    <span>📍 TDS-tested across 6 zones in Bhubaneswar</span>
+    <span>👤 By Rajan Pattnaik</span>
+    <span>⏱ 12 min read</span>
+  </div>
+  <div class="hero-img-wrap">
+    <img src="images/water-supply-bhubaneswar-hard-soft-hero.png" alt="Water Supply in Bhubaneswar — Hard Water vs Soft Water Guide 2026" />
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════ ARTICLE BODY -->
+<main class="article-body">
+
+  <div class="intro-block">
+    <strong>Verified on the ground:</strong> I spoke to residents across Patia, Chandrasekharpur, Old Town, and Rasulgarh on February 17, 2026, and tested tap water TDS levels with a handheld meter bought near Unit-1 Haat. The results varied more than most people expect — and the variation matters for how you set up your kitchen and which purifier you actually need.
+  </div>
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc-box">
+    <div class="toc-title">📋 Table of Contents</div>
+    <ol>
+      <li><a href="#sources">Where Does Bhubaneswar's Water Come From?</a></li>
+      <li><a href="#tds">The TDS Numbers: What I Actually Measured</a></li>
+      <li><a href="#signs">The Signs You Have Hard Water in Your Flat</a></li>
+      <li><a href="#safe">Is Bhubaneswar's Water Safe to Drink Directly?</a></li>
+      <li><a href="#purifier">Which Purifier Do You Actually Need?</a></li>
+      <li><a href="#cost">The Real Cost: Buying vs Running a Purifier</a></li>
+      <li><a href="#video">Watch: How to Test Your Water at Home</a></li>
+      <li><a href="#solutions">Solving the Other Hard Water Problems</a></li>
+      <li><a href="#quick-ref">Quick Reference by Area</a></li>
+    </ol>
+  </div>
+
+  <p>The first week in a new Bhubaneswar flat, most people notice the same things: the bathroom tiles develop a faint white film, the geyser element needs descaling after a few months, and the water from the tap tastes slightly different depending on whether you're in Patia or Old Town. Is it hard water? Is it safe to drink? What purifier do you actually need? The answers depend on where exactly in the city you live and whether your building uses PHED piped supply, a borewell, or a water tanker.</p>
+
+  <!-- ═════════════════════ SOURCES ═════════════════════ -->
+  <h2 id="sources">Where Does Bhubaneswar's Water Come From?</h2>
+
+  <p>Bhubaneswar gets its water from two main sources, and the type of water coming out of your tap depends entirely on which one your area is connected to.</p>
+
+  <div class="source-header">
+    <div class="source-block phed">
+      <div class="sb-icon">🏗️</div>
+      <div class="sb-name">PHED Piped Supply</div>
+      <div class="sb-areas">CSP · Niladri Vihar · Nayapalli · Saheed Nagar</div>
+      <p>Treated surface water — chlorinated before reaching your tap. Generally softer, lower TDS, safer from a hardness standpoint.</p>
+    </div>
+    <div class="source-block bore">
+      <div class="sb-icon">🔩</div>
+      <div class="sb-name">Borewell / Groundwater</div>
+      <div class="sb-areas">Patia (independent buildings) · Raghunathpur · Kalarahanga</div>
+      <p>Harder, higher TDS. Picks up calcium and magnesium from laterite and granite rock under the city. Needs RO purification.</p>
+    </div>
+    <div class="source-block tanker">
+      <div class="sb-icon">🚛</div>
+      <div class="sb-name">Water Tanker Supply</div>
+      <div class="sb-areas">Kalarahanga new flats · Sundarpada · outer zones</div>
+      <p>Variable quality batch to batch. TDS ranges 300–500 ppm depending on supplier. Treat as borewell water for purifier selection.</p>
+    </div>
+  </div>
+
+  <p>The short answer: <strong>if you are in a well-planned colony like CSP or Niladri Vihar, you likely have softer treated water. If you are in an independent building in Patia or Raghunathpur running on a borewell, you likely have harder water.</strong> The experience is not uniform across the city — two buildings 500 metres apart can have completely different water quality.</p>
+
+  <!-- ═════════════════════ TDS NUMBERS ═════════════════════ -->
+  <h2 id="tds">The TDS Numbers: What I Actually Measured</h2>
+
+  <p>TDS — Total Dissolved Solids — is the simplest measure of water quality for daily use. The WHO recommends below 300 ppm for best taste; BIS permits up to 500 ppm for drinking water; above 500 ppm, RO purification is strongly recommended. Here is what I measured with a <strong>₹200 TDS meter</strong> from a hardware shop near <strong>Unit-1 Haat</strong> on February 17, 2026:</p>
+
+  <div class="tds-grid">
+    <div class="tds-card">
+      <div class="tds-card-header">
+        <div class="tc-area">Niladri Vihar (apartment)</div>
+        <div class="tc-source">PHED piped supply</div>
+      </div>
+      <div class="tds-card-body">
+        <div class="tds-reading safe">180–220 ppm</div>
+        <div class="tds-verdict safe">UV/UF only</div>
+      </div>
+    </div>
+    <div class="tds-card">
+      <div class="tds-card-header">
+        <div class="tc-area">Chandrasekharpur (near CSP P.S.)</div>
+        <div class="tc-source">PHED piped supply</div>
+      </div>
+      <div class="tds-card-body">
+        <div class="tds-reading safe">210–260 ppm</div>
+        <div class="tds-verdict safe">UV/UF only</div>
+      </div>
+    </div>
+    <div class="tds-card">
+      <div class="tds-card-header">
+        <div class="tc-area">Old Town (near Lingaraj Rd)</div>
+        <div class="tc-source">PHED — older pipelines</div>
+      </div>
+      <div class="tds-card-body">
+        <div class="tds-reading moderate">280–340 ppm</div>
+        <div class="tds-verdict moderate">RO recommended</div>
+      </div>
+    </div>
+    <div class="tds-card">
+      <div class="tds-card-header">
+        <div class="tc-area">Patia (Shikharchandi Road)</div>
+        <div class="tc-source">Borewell — independent building</div>
+      </div>
+      <div class="tds-card-body">
+        <div class="tds-reading moderate">420–510 ppm</div>
+        <div class="tds-verdict moderate">RO recommended</div>
+      </div>
+    </div>
+    <div class="tds-card">
+      <div class="tds-card-header">
+        <div class="tc-area">Raghunathpur Jali</div>
+        <div class="tc-source">Borewell — hard water</div>
+      </div>
+      <div class="tds-card-body">
+        <div class="tds-reading high">480–580 ppm</div>
+        <div class="tds-verdict high">RO required</div>
+      </div>
+    </div>
+    <div class="tds-card">
+      <div class="tds-card-header">
+        <div class="tc-area">Kalarahanga (flat)</div>
+        <div class="tc-source">Tanker water supply</div>
+      </div>
+      <div class="tds-card-body">
+        <div class="tds-reading moderate">350–420 ppm</div>
+        <div class="tds-verdict moderate">RO recommended</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pro-tip">
+    <strong>Seasonal note:</strong> TDS levels drop 20–30% during the July–September monsoon as rainfall dilutes groundwater. A borewell that reads 480 ppm in May may read 320 ppm in August. <strong>Do not use the monsoon reading to decide whether you need RO</strong> — always use the summer reading, which reflects the worst case.
+  </div>
+
+  <!-- Secondary infographic image -->
+  <figure class="inline-fig">
+    <img src="images/water-tds-levels-bhubaneswar.png" alt="TDS Levels by Area — Bhubaneswar Water Quality 2026 Chart — ValueLayer" />
+    <figcaption>TDS readings across 6 zones, February 17, 2026. PHED-supplied colonies (blue bars) test well within safe limits. Borewell-dependent areas like Raghunathpur (orange) regularly exceed the 500 ppm BIS limit where RO is required. Tanker water (brown) falls in the borderline zone.</figcaption>
+  </figure>
+
+  <!-- ═════════════════════ SIGNS ═════════════════════ -->
+  <h2 id="signs">The Signs You Have Hard Water in Your Flat</h2>
+
+  <p>You do not need a TDS meter to know. Hard water leaves a trail across every surface it touches.</p>
+
+  <div class="signs-list">
+    <div class="sign-item">
+      <div class="sign-icon">🚿</div>
+      <div class="sign-content">
+        <strong>White scale on taps and faucets</strong>
+        <p>A chalky white crust near the tap aerator after a few weeks — that is calcium carbonate from hard water. In areas like Raghunathpur and Kalarahanga, this happens within days of moving in.</p>
+      </div>
+    </div>
+    <div class="sign-item">
+      <div class="sign-icon">⚡</div>
+      <div class="sign-content">
+        <strong>Geyser performance dropping early</strong>
+        <p>Scale coats the heating rod, reduces efficiency, and eventually burns it out. In hard-water buildings, geysers need servicing every 6–8 months instead of once a year. Ask your landlord when the element was last descaled.</p>
+      </div>
+    </div>
+    <div class="sign-item">
+      <div class="sign-icon">🧼</div>
+      <div class="sign-content">
+        <strong>Soap does not lather properly</strong>
+        <p>Hard water reacts with soap and shampoo to form a sticky scum instead of a lather. If you feel like you're using far more shampoo than normal to work up a decent lather, hard water is the most likely cause.</p>
+      </div>
+    </div>
+    <div class="sign-item">
+      <div class="sign-icon">💇</div>
+      <div class="sign-content">
+        <strong>Hair fall and dry skin</strong>
+        <p>A very common complaint from people who move to borewell buildings in Patia and Raghunathpur from cities with softer water. Dissolved calcium and magnesium strip natural oils. Not dangerous, but genuinely unpleasant — and the complaints are consistent.</p>
+      </div>
+    </div>
+    <div class="sign-item">
+      <div class="sign-icon">👕</div>
+      <div class="sign-content">
+        <strong>Clothes stiffening after wash</strong>
+        <p>Hard water reacts with laundry detergent and leaves a mineral residue in fabric. Adding a small amount of washing soda (₹30–₹40 at Damana Haat) to the wash cycle helps significantly.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ SAFE TO DRINK ═════════════════════ -->
+  <h2 id="safe">Is Bhubaneswar's Water Safe to Drink Directly?</h2>
+
+  <div class="quick-ref">
+    <div class="quick-card">
+      <h4>🏗️ PHED Piped Supply Areas</h4>
+      <table>
+        <tr><td>Bacteriological safety</td><td>Generally safe — chlorinated</td></tr>
+        <tr><td>Main risk</td><td>Pipeline contamination (Old Town)</td></tr>
+        <tr><td>Hardness risk</td><td>Low to moderate</td></tr>
+        <tr><td>Recommended treatment</td><td>UV + UF minimum</td></tr>
+      </table>
+    </div>
+    <div class="quick-card">
+      <h4>🔩 Borewell Areas (Patia, Raghunathpur)</h4>
+      <table>
+        <tr><td>TDS risk</td><td>High — often 500+ ppm in summer</td></tr>
+        <tr><td>Other risks</td><td>Nitrate, bacteria from soil</td></tr>
+        <tr><td>Hardness risk</td><td>High</td></tr>
+        <tr><td>Recommended treatment</td><td>RO + UV + UF — no exceptions</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <p>A 2024 piped water quality study across all 67 BMC wards found roughly <strong>22.69% deviation in hardness parameters</strong> from standard limits — meaning the hardness problem is real but not uniform. It is concentrated in the borewell-dependent areas, not the treated PHED zones. <strong>Do not drink directly from the tap without filtration in any area</strong> of Bhubaneswar.</p>
+
+  <!-- ═════════════════════ PURIFIER ═════════════════════ -->
+  <h2 id="purifier">Which Purifier Do You Actually Need?</h2>
+
+  <p>This is the question most people get wrong — usually because a salesperson tells them they need RO everywhere. They do not. Your area and water source determines your setup.</p>
+
+  <!-- Zone 1: Soft water -->
+  <div class="purifier-zone">
+    <div class="purifier-zone-header soft">
+      <div class="pz-badge soft">💧</div>
+      <div class="pz-info">
+        <h3>PHED Piped Supply Areas — Soft Water</h3>
+        <div class="pz-areas">Niladri Vihar · CSP · Sailashree Vihar · Nayapalli · Jayadev Vihar</div>
+      </div>
+      <div class="pz-tag soft">UV + UF Only</div>
+    </div>
+    <div class="purifier-zone-body">
+      <p>TDS is typically 180–300 ppm. You <strong>do not need an RO purifier.</strong> An RO at this level wastes 3 litres of water for every 1 litre purified and strips the water of beneficial calcium and magnesium. UV + UF is all you need — it kills bacteria and viruses from pipeline contamination with zero water wastage.</p>
+      <div class="model-cards">
+        <div class="model-card recommended">
+          <div class="mc-name">Aquaguard Marvel NXT UV+UF</div>
+          <div class="mc-type">UV + UF · Zero Wastage</div>
+          <div class="mc-price">₹8,000–₹10,000</div>
+          <div class="mc-why">Excellent for municipal soft water. Kills bacteria and viruses, no water wastage. Strong service across Bhubaneswar.</div>
+        </div>
+        <div class="model-card">
+          <div class="mc-name">Kent Ultra Storage UV+UF</div>
+          <div class="mc-type">UV + UF · Storage tank</div>
+          <div class="mc-price">₹7,500–₹9,000</div>
+          <div class="mc-why">Reliable, strong service network in Bhubaneswar. Handles municipal supply well with 7L storage.</div>
+        </div>
+        <div class="model-card">
+          <div class="mc-name">Havells Aquas Lite UV+UF</div>
+          <div class="mc-type">UV + UF · Budget</div>
+          <div class="mc-price">₹7,000–₹8,500</div>
+          <div class="mc-why">Budget-friendly. Good for bachelor flats and PGs in soft-water zones near CSP and Niladri Vihar.</div>
+        </div>
+        <div class="model-card">
+          <div class="mc-name">AO Smith UV AS-35</div>
+          <div class="mc-type">UV · Compact</div>
+          <div class="mc-price">₹9,000–₹11,000</div>
+          <div class="mc-why">Compact design for flats with limited under-sink space. Good for furnished apartments in Jayadev Vihar.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Zone 2: Hard water -->
+  <div class="purifier-zone">
+    <div class="purifier-zone-header hard">
+      <div class="pz-badge hard">🔩</div>
+      <div class="pz-info">
+        <h3>Borewell / High-TDS Areas</h3>
+        <div class="pz-areas">Patia independent buildings · Raghunathpur · Kalarahanga · outer zones</div>
+      </div>
+      <div class="pz-tag hard">RO + UV + UF Required</div>
+    </div>
+    <div class="purifier-zone-body">
+      <p>TDS is typically 400–600 ppm — you need RO. <strong>RO + UV + UF combination</strong> is the correct setup: RO reduces dissolved solids and hardness, UV kills biological contamination, UF provides backup. Do not skip any layer.</p>
+      <div class="model-cards">
+        <div class="model-card recommended">
+          <div class="mc-name">Kent Grand+ RO+UV+UF</div>
+          <div class="mc-type">RO + UV + UF · Zero Wastage Tech</div>
+          <div class="mc-price">₹12,000–₹16,000</div>
+          <div class="mc-why">The most trusted workhorse for borewell water. Handles up to 2,000 ppm TDS. Zero-wastage pump sends rejected water back to overhead tank — critical in Bhubaneswar summer. Service centres in Patia, Saheed Nagar, CSP.</div>
+        </div>
+        <div class="model-card recommended">
+          <div class="mc-name">AO Smith Z5 RO+UV</div>
+          <div class="mc-type">RO + UV · High Recovery Rate</div>
+          <div class="mc-price">₹14,000–₹18,000</div>
+          <div class="mc-why">Higher water recovery than comparable ROs, longer membrane life, sleek form factor. Good for furnished flats with tight kitchen space.</div>
+        </div>
+        <div class="model-card">
+          <div class="mc-name">Aquaguard Delight NXT RO+UV</div>
+          <div class="mc-type">RO + UV · Budget Champion</div>
+          <div class="mc-price">₹9,000–₹12,000</div>
+          <div class="mc-why">Core RO+UV protection at the lowest price. 6L tank — sufficient for 1–2 people. Eureka Forbes service strong across Patia, Damana Road, Rasulgarh.</div>
+        </div>
+        <div class="model-card">
+          <div class="mc-name">Livpure Glo RO+UV+UF</div>
+          <div class="mc-type">RO + UV + UF · Mineral Retention</div>
+          <div class="mc-price">₹10,000–₹13,000</div>
+          <div class="mc-why">Mid-range option with mineral retention. Good for families concerned about completely stripped water taste. Available on subscription from ₹500/month.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Zone 3: Old Town / mixed -->
+  <div class="purifier-zone">
+    <div class="purifier-zone-header mixed">
+      <div class="pz-badge mixed">🏛️</div>
+      <div class="pz-info">
+        <h3>Old Town &amp; Rasulgarh — Old PHED Pipelines</h3>
+        <div class="pz-areas">Old Town · Rasulgarh · Bomikhal · Unit-6</div>
+      </div>
+      <div class="pz-tag mixed">RO + UV Recommended</div>
+    </div>
+    <div class="purifier-zone-body">
+      <p>TDS is typically 280–380 ppm — borderline. The treated PHED water itself is reasonably clean, but <strong>ageing infrastructure</strong> in Old Town and Rasulgarh means contamination can enter through corroded pipes. RO is the safer choice here even if TDS is just below 500 ppm.</p>
+      <div class="model-cards">
+        <div class="model-card recommended">
+          <div class="mc-name">Livpure Glo RO+UV+UF</div>
+          <div class="mc-type">RO + UV + UF</div>
+          <div class="mc-price">₹10,000–₹13,000</div>
+          <div class="mc-why">Good mid-range RO for borderline TDS. The mineral retention feature preserves taste when TDS is not extremely high.</div>
+        </div>
+        <div class="model-card">
+          <div class="mc-name">Kent Grand+ RO+UV+UF</div>
+          <div class="mc-type">RO + UV + UF · Premium</div>
+          <div class="mc-price">₹12,000–₹16,000</div>
+          <div class="mc-why">Premium option with excellent service. Worth the extra investment for a long-term rental in Old Town.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Zone 4: Tanker -->
+  <div class="purifier-zone">
+    <div class="purifier-zone-header tanker">
+      <div class="pz-badge tanker">🚛</div>
+      <div class="pz-info">
+        <h3>Tanker-Dependent Areas</h3>
+        <div class="pz-areas">Kalarahanga new apartments · Sundarpada · some Patia pockets</div>
+      </div>
+      <div class="pz-tag tanker">RO + UV + UF Required</div>
+    </div>
+    <div class="purifier-zone-body">
+      <p>Tanker water quality is inconsistent — TDS can range from 300 to 500+ ppm depending on the supplier and batch. Treat as worst-case borewell water. Go with RO+UV+UF to cover all scenarios regardless of what the meter reads today.</p>
+      <div class="model-cards">
+        <div class="model-card recommended">
+          <div class="mc-name">Aquaguard Delight NXT RO+UV</div>
+          <div class="mc-type">RO + UV · Budget</div>
+          <div class="mc-price">₹9,000–₹12,000</div>
+          <div class="mc-why">Solid budget RO for tanker areas where you want protection but the TDS is variable.</div>
+        </div>
+        <div class="model-card">
+          <div class="mc-name">Kent Grand+ RO+UV+UF</div>
+          <div class="mc-type">RO + UV + UF</div>
+          <div class="mc-price">₹12,000–₹16,000</div>
+          <div class="mc-why">Best for tanker water. The UF layer provides backup when TDS spikes between batches.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ REAL COST ═════════════════════ -->
+  <h2 id="cost">The Real Cost: Buying vs Running a Purifier</h2>
+
+  <p>The purchase price is only half the story. AMC and filter replacement is what catches people off guard. Here is the full annual cost picture:</p>
+
+  <div class="cost-breakdown">
+    <div class="cost-col">
+      <div class="cost-col-header uv">UV + UF Purifier (Soft Water Zones)</div>
+      <table>
+        <tr><td>AMC</td><td>₹600–₹1,200/year</td></tr>
+        <tr><td>UV lamp replacement (annual)</td><td>₹500–₹800</td></tr>
+        <tr><td>UF membrane (2–3 years)</td><td>₹800–₹1,200</td></tr>
+        <tr><td>Servicing visits</td><td>2× per year included</td></tr>
+        <tr class="total-row"><td>Total annual upkeep</td><td>₹1,000–₹2,000</td></tr>
+      </table>
+    </div>
+    <div class="cost-col">
+      <div class="cost-col-header ro">RO + UV + UF Purifier (Hard Water Zones)</div>
+      <table>
+        <tr><td>AMC (Kent)</td><td>₹1,500–₹3,000/year</td></tr>
+        <tr><td>AMC (Aquaguard / Eureka Forbes)</td><td>₹599–₹2,000/year</td></tr>
+        <tr><td>RO membrane (1–2 years)</td><td>₹1,500–₹2,500</td></tr>
+        <tr><td>Pre-filters (every 6 months)</td><td>₹300–₹600</td></tr>
+        <tr class="total-row"><td>Total annual upkeep</td><td>₹2,500–₹5,000</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="insider-tip">
+    <strong>💡 The Subscription Option:</strong> Livpure Smart and DrinkPrime now offer subscription-based purifier models in Bhubaneswar from <strong>₹400–₹700/month</strong> — machine, installation, filter replacements, and servicing all included, nothing upfront. DrinkPrime has a specific presence in the IT belt covering Patia and CSP. For tenants who move frequently, this is worth considering.
+  </div>
+
+  <!-- ═════════════════════ YOUTUBE ═════════════════════ -->
+  <div class="yt-wrap" id="video">
+    <div class="yt-label">▶ Watch: How to Test Your Home Water Quality with a TDS Meter</div>
+    <div class="yt-frame">
+      <iframe
+        src="https://www.youtube.com/embed/sWB3qzDFJb0"
+        title="How to Test Water Quality at Home Using a TDS Meter — Hard Water vs Soft Water Explained"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <p class="yt-caption">A practical guide to testing your home water quality using a ₹200 TDS meter — the exact step covered in this article. The video explains what TDS numbers mean, how to read them correctly, and when you cross from UV-sufficient into RO-required territory.</p>
+  </div>
+
+  <!-- ═════════════════════ SOLUTIONS ═════════════════════ -->
+  <h2 id="solutions">Solving the Other Hard Water Problems (Beyond Drinking)</h2>
+
+  <p>Even after installing an RO for drinking, hard water still reaches your bathroom, geyser, washing machine, and overhead tank. Here are the practical fixes that Bhubaneswar residents in borewell areas actually use:</p>
+
+  <div class="solution-list">
+    <div class="solution-item">
+      <div class="sol-icon">⚡</div>
+      <div class="sol-body">
+        <strong>Geyser Descaling (every 6 months)</strong>
+        Use a citric acid solution — pour into the geyser tank, leave for 2 hours, flush. Prevents heating element burnout completely. Local electricians near Rasulgarh or Patia Chowk do geyser descaling visits for ₹200–₹400.
+        <div class="sol-cost">Citric acid packet: ₹30–₹50 at Saheed Nagar Haat</div>
+      </div>
+    </div>
+    <div class="solution-item">
+      <div class="sol-icon">🚿</div>
+      <div class="sol-body">
+        <strong>Shower Head &amp; Tap Aerator Cleaning</strong>
+        Unscrew the aerator and soak in white vinegar for an hour. This costs essentially nothing and restores full water pressure immediately. Do it every 2–3 months in high-TDS buildings.
+        <div class="sol-cost">White vinegar: ₹40–₹60 at Damana Haat</div>
+      </div>
+    </div>
+    <div class="solution-item">
+      <div class="sol-icon">💇</div>
+      <div class="sol-body">
+        <strong>Shower Filter for Hair and Skin</strong>
+        A small screw-on attachment for the shower head containing a carbon and mineral filter. Noticeably reduces the harsh effect of hard water on skin and hair. Residents near Nandankanan Road and Raghunathpur who complain of hair fall after moving in swear by these.
+        <div class="sol-cost">Shower filter: ₹700–₹1,500 on Amazon</div>
+      </div>
+    </div>
+    <div class="solution-item">
+      <div class="sol-icon">👕</div>
+      <div class="sol-body">
+        <strong>Washing Machine Protection</strong>
+        Use a water softening tablet (brands like Swash or Softwash) with every wash cycle. Prevents detergent scum, keeps clothes softer, and protects the drum and heating element from scale.
+        <div class="sol-cost">₹80–₹120/month at Big Bazaar near KIIT Square</div>
+      </div>
+    </div>
+    <div class="solution-item">
+      <div class="sol-icon">🏗️</div>
+      <div class="sol-body">
+        <strong>Whole-House Water Softener (Long-Term Solution)</strong>
+        If you own the flat or are in a long-term rental, a whole-house softener at the main inlet handles everything — geyser, bathroom, washing machine, overhead tank. Requires salt refill every 2–3 months. Increasingly being installed in gated societies near Jayadev Vihar that have switched to borewell supply.
+        <div class="sol-cost">₹8,000–₹25,000 installed · Salt refill ₹300–₹500/batch</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ THE ONE THING ═════════════════════ -->
+  <div class="verdict">
+    <div class="v-tag">The One Thing to Do This Week</div>
+    <p>Buy the TDS meter. Test your own water. The <strong>₹200</strong> you spend on it will either confirm that you need to spend ₹15,000 on an RO — or save you from spending ₹15,000 unnecessarily on an RO you don't actually need. Either way, it is the most useful ₹200 you will spend in your first month in Bhubaneswar. Available at hardware shops near <strong>Unit-1 Haat, Kalpana Square</strong>, and online from Amazon within 2 days.</p>
+  </div>
+
+  <div class="tips-box">
+    <h3>🔑 How to Test Your Water Correctly (5 Rules)</h3>
+    <ol>
+      <li><strong>Test at 9 AM</strong> — before the building overhead tank drains and pressure fluctuations affect the reading.</li>
+      <li><strong>Test in summer (April–June)</strong> — not monsoon. Monsoon readings are 20–30% lower and give a false sense of security.</li>
+      <li><strong>Test from the direct tap, not after the purifier.</strong> You are testing the incoming water, not the treated output.</li>
+      <li><strong>Test over 3 consecutive days</strong> and take the average — single-day spikes can be misleading.</li>
+      <li><strong>If your reading is above 400 ppm on any single test in summer</strong>, go with RO. Don't wait for a perfect average.</li>
+    </ol>
+  </div>
+
+  <!-- ═════════════════════ QUICK REF TABLE ═════════════════════ -->
+  <h2 id="quick-ref">Quick Reference: Which Purifier for Which Zone</h2>
+
+  <table class="purifier-table">
+    <thead>
+      <tr>
+        <th>Area</th>
+        <th>Water Source</th>
+        <th>Typical TDS</th>
+        <th>What You Need</th>
+        <th>Budget Option</th>
+        <th>Premium Option</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Niladri Vihar, CSP, Sailashree Vihar</td>
+        <td>PHED piped</td>
+        <td class="cell-green">180–260 ppm</td>
+        <td>UV + UF only</td>
+        <td class="cell-price">Havells Aquas Lite ₹7,000</td>
+        <td class="cell-price">Aquaguard Marvel ₹9,500</td>
+      </tr>
+      <tr>
+        <td>Nayapalli, Jayadev Vihar</td>
+        <td>PHED piped</td>
+        <td class="cell-green">200–280 ppm</td>
+        <td>UV + UF only</td>
+        <td class="cell-price">Kent Ultra UV ₹7,500</td>
+        <td class="cell-price">AO Smith UV ₹10,000</td>
+      </tr>
+      <tr>
+        <td>Old Town, Rasulgarh</td>
+        <td>PHED (old pipes)</td>
+        <td class="cell-orange">280–380 ppm</td>
+        <td>RO + UV recommended</td>
+        <td class="cell-price">Livpure Glo ₹10,000</td>
+        <td class="cell-price">Kent Grand+ ₹14,000</td>
+      </tr>
+      <tr>
+        <td>Patia independent buildings</td>
+        <td>Borewell</td>
+        <td class="cell-orange">400–550 ppm</td>
+        <td>RO + UV + UF</td>
+        <td class="cell-price">Aquaguard Delight ₹9,500</td>
+        <td class="cell-price">Kent Grand+ ₹14,000</td>
+      </tr>
+      <tr>
+        <td>Raghunathpur, Kalarahanga</td>
+        <td>Borewell</td>
+        <td class="cell-red">450–600 ppm</td>
+        <td>RO + UV + UF</td>
+        <td class="cell-price">Aquaguard Delight ₹9,500</td>
+        <td class="cell-price">AO Smith Z5 ₹16,000</td>
+      </tr>
+      <tr>
+        <td>Tanker-dependent areas</td>
+        <td>Tanker water</td>
+        <td class="cell-orange">300–500 ppm</td>
+        <td>RO + UV + UF</td>
+        <td class="cell-price">Aquaguard Delight ₹9,500</td>
+        <td class="cell-price">Kent Grand+ ₹14,000</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ═════════════════════ AUTHOR BOX ═════════════════════ -->
+  <div class="author-box">
+    <img src="images/author-rajan-pattnaik.jpg" alt="Rajan Pattnaik" style="width:80px;height:80px;border-radius:50%;object-fit:cover;">
+    <div class="author-info">
+      <div class="author-label">Written by</div>
+      <div class="author-name">Rajan Pattnaik</div>
+      <div class="author-title">Cost-of-Living Researcher &amp; Local Guide, ValueLayer</div>
+      <p class="author-bio">Rajan has lived in Bhubaneswar for over 12 years and writes about real estate, household budgets, services, and everyday costs in the Temple City. For this article, he tested tap water TDS levels at six locations across the city on February 17, 2026, using a calibrated Konvio TDS meter purchased from a hardware shop near Unit-1 Haat, and spoke to residents about their water quality experience and purifier choices. When he's not measuring dissolved solids, he's near Patia Chowk counting chai stalls.</p>
+      <div class="author-meta">
+        <span>📍 Based in Bhubaneswar, Odisha</span>
+        <span>✍️ 51 articles published</span>
+        <span>🗓️ Writing since 2019</span>
+      </div>
+      <div class="author-social">
+        <a href="#">Twitter / X</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">All Articles</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ RELATED ARTICLES ═════════════════════ -->
+  <div class="related-section">
+    <h2>You Might Also Like</h2>
+    <div class="related-grid">
+      <a href="24-hour-medical-stores-bhubaneswar.html" class="related-card">
+        <div class="related-card-body">
+          <div class="related-card-tag">Services &amp; Utilities</div>
+          <h4>24/7 Medical Stores in Bhubaneswar: The Verified List (2026)</h4>
+          <p>I called 14 stores listed as "24 hours open" on Google Maps — at least 6 were not. Only genuinely open stores, organised by area.</p>
+        </div>
+      </a>
+      <a href="broadband-bhubaneswar-jiofiber-airtel.html" class="related-card">
+        <div class="related-card-body">
+          <div class="related-card-tag">Services &amp; Utilities</div>
+          <h4>Best Broadband in Bhubaneswar: JioFiber vs Airtel vs Local ISPs (2026)</h4>
+          <p>Real 9 PM speed tests across Patia, CSP and Nandankanan Road with all plan prices and a quick decision table.</p>
+        </div>
+      </a>
+      <a href="hidden-costs-moving-bhubaneswar.html" class="related-card">
+        <div class="related-card-body">
+          <div class="related-card-tag">City Living</div>
+          <h4>Hidden Costs of Moving to Bhubaneswar No One Tells You</h4>
+          <p>Broker fees, utility deposits, "furnished" flat surprises — every rupee you didn't budget for in your first month.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<!-- ══════════════════════════════════════════════════ FOOTER -->
+<footer class="site-footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo">Value<span>Layer</span></a>
+      <p>Bhubaneswar's most trusted guide to real living costs, local tips, and everything the Temple City has to offer. All prices verified on the ground.</p>
+      <div class="footer-social">
+        <a href="https://twitter.com/valuelayerin" target="_blank" rel="noopener" aria-label="Twitter/X"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="https://instagram.com/valuelayerin" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        <a href="https://youtube.com/@valuelayerin" target="_blank" rel="noopener" aria-label="YouTube"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <a href="https://linkedin.com/company/valuelayerin" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="city-living.html">City Living &amp; Housing</a></li>
+        <li><a href="education.html">Education &amp; Career</a></li>
+        <li><a href="lifestyle.html">Explore &amp; Lifestyle</a></li>
+        <li><a href="services.html">Services &amp; Utilities</a></li>
+        <li><a href="transport.html">Transport &amp; Travel</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="advertise.html">Advertise</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-row1">
+      <span class="footer-copy">
+        &#169; 2026 Valuelayer.in &nbsp;&middot;&nbsp; Built with <span class="heart">&#9829;</span> from Bhubaneswar
+      </span>
+      <div class="footer-legal-links">
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="disclaimer.html">Disclaimer</a>
+      </div>
+    </div>
+    <p class="footer-disclaimer-line">
+      TDS readings taken with a Konvio TDS meter, calibrated before use, on February 17, 2026. Purifier prices are approximate MRP and vary by retailer and current offers. AMC costs reference brand websites as of February 2026. Water quality data references the BMC piped water quality study (ResearchGate, 2024) and PHED Bhubaneswar records. Always test your specific flat's water before purchasing a purifier. For corrections or updates, <a href="contact.html">contact us here</a>. See our full <a href="disclaimer.html">Disclaimer</a> and <a href="privacy.html">Privacy Policy</a>.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

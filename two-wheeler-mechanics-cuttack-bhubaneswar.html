@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="canonical" href="https://valuelayer.in/" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>Best Two-Wheeler Mechanics on Cuttack–Bhubaneswar Road: Trusted by Locals (2026) | ValueLayer</title>
+  <meta name="description" content="Verified February 2026: 5 trusted two-wheeler workshops on the Cuttack–Bhubaneswar NH-16 corridor — from Gugnani Honda at Chintamaniswar Square to the Palasuni RE cluster — with real rates, what to say to avoid overcharging, and a 20-minute interview with a mechanic who's been on this road for 22 years." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+
+    /* ── Workshop profile cards ── */
+    .workshop-card {
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      background: var(--card);
+      overflow: hidden;
+      margin: 0 0 30px;
+    }
+    .workshop-card-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 24px 16px;
+      border-bottom: 1px solid var(--rule);
+      background: #fafaf8;
+    }
+    .workshop-rank {
+      width: 48px; height: 48px; min-width: 48px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-family: 'Lora', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .workshop-rank.r2 { background: #3a6a9a; }
+    .workshop-rank.r3 { background: #4a8a6a; }
+    .workshop-rank.r4 { background: #7a5a20; }
+    .workshop-rank.r5 { background: #6a5a8a; }
+    .workshop-title { flex: 1; }
+    .workshop-title h3 {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 0 0 4px;
+    }
+    .workshop-title .wt-sub {
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-weight: 400;
+    }
+    .workshop-tag {
+      font-size: 0.66rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 5px 12px;
+      border-radius: 3px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .workshop-tag.authorised { background: #fdf3ec; color: var(--accent); }
+    .workshop-tag.independent{ background: #eef8ee; color: #2a7a2a; }
+    .workshop-tag.cluster    { background: #eef4fa; color: #3a6a9a; }
+    .workshop-tag.doorstep   { background: #f4f0fa; color: #6a5a8a; }
+    .workshop-body { padding: 20px 24px; }
+    .workshop-body > p { font-size: 0.9rem; line-height: 1.8; margin-bottom: 14px; }
+
+    /* workshop meta row */
+    .workshop-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      padding: 12px 0 14px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 16px;
+    }
+    .workshop-meta span { display: flex; align-items: center; gap: 5px; font-weight: 400; }
+    .workshop-meta .wm-hours { color: #2a7a2a; font-weight: 600; }
+
+    /* rates grid inside workshop */
+    .rates-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin: 0 0 14px;
+    }
+    .rate-row {
+      background: #f8f8f5;
+      border: 1px solid var(--rule);
+      border-radius: 5px;
+      padding: 9px 12px;
+      font-size: 0.82rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+    .rate-row .rl { color: var(--muted); font-weight: 400; font-size: 0.8rem; }
+    .rate-row .rv { font-weight: 600; color: var(--ink); white-space: nowrap; font-size: 0.82rem; }
+
+    /* locals-say box */
+    .locals-say {
+      background: var(--accent-lt);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 6px 6px 0;
+      padding: 12px 16px;
+      font-size: 0.86rem;
+      color: #4a3020;
+      line-height: 1.75;
+      margin: 8px 0 4px;
+    }
+    .locals-say strong { color: var(--accent); }
+
+    /* best-for pills strip */
+    .best-for-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 10px;
+    }
+    .bf-pill {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 99px;
+      padding: 5px 13px;
+      font-size: 0.76rem;
+      font-weight: 500;
+      color: var(--ink-soft);
+    }
+    .bf-pill.accent { background: var(--accent-lt); border-color: var(--accent); color: var(--accent); font-weight: 600; }
+
+    /* ── Interview blockquote ── */
+    .interview-box {
+      background: #1a1a1a;
+      border-radius: 10px;
+      padding: 28px 30px;
+      margin: 32px 0;
+    }
+    .interview-box .ib-header {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 22px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #2a2a2a;
+    }
+    .ib-avatar {
+      width: 52px; height: 52px; min-width: 52px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #c8561a 0%, #e8803a 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Lora', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .ib-name {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 3px;
+    }
+    .ib-title { font-size: 0.78rem; color: #888; font-weight: 300; }
+    .ib-label {
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent);
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    .interview-qa { margin-bottom: 22px; }
+    .interview-qa:last-child { margin-bottom: 0; }
+    .iq-question {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 700;
+      color: #f0a060;
+      margin-bottom: 8px;
+    }
+    .iq-hindi {
+      font-size: 0.88rem;
+      color: #b4aea6;
+      font-weight: 300;
+      line-height: 1.8;
+      font-style: italic;
+      margin-bottom: 8px;
+      padding-left: 14px;
+      border-left: 2px solid #333;
+    }
+    .iq-translation {
+      font-size: 0.86rem;
+      color: #d0ccc4;
+      font-weight: 300;
+      line-height: 1.78;
+      padding: 10px 14px;
+      background: #222;
+      border-radius: 5px;
+    }
+    .iq-translation strong { color: #f0a060; font-weight: 600; }
+
+    /* ── Red flags list ── */
+    .redflag-list {
+      display: grid;
+      gap: 11px;
+      margin: 16px 0 28px;
+    }
+    .redflag-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      background: var(--card);
+      border: 1px solid #f0cfc0;
+      border-left: 3px solid #c83a1a;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+    }
+    .rf-icon { font-size: 1.3rem; flex-shrink: 0; width: 32px; text-align: center; }
+    .rf-body { flex: 1; font-size: 0.88rem; line-height: 1.72; color: var(--ink-soft); }
+    .rf-body strong { color: var(--ink); font-weight: 600; display: block; margin-bottom: 3px; font-size: 0.9rem; }
+
+    /* ── Standard rates table ── */
+    .rates-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+      margin: 18px 0 30px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--rule);
+    }
+    .rates-table thead tr { background: var(--ink); }
+    .rates-table th {
+      color: #fff;
+      padding: 11px 14px;
+      text-align: left;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      font-size: 0.77rem;
+    }
+    .rates-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--rule);
+      vertical-align: middle;
+      line-height: 1.45;
+    }
+    .rates-table tr:last-child td { border-bottom: none; }
+    .rates-table tr:nth-child(even) td { background: #f7f7f4; }
+    .rates-table td:first-child { font-weight: 500; color: var(--ink); }
+    .rates-table .labour-cell { color: #3a6a9a; font-weight: 600; }
+    .rates-table .parts-cell  { color: var(--muted); font-size: 0.77rem; }
+
+    /* ── Road map strip ── */
+    .road-strip {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin: 22px 0 28px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+    .road-node {
+      flex-shrink: 0;
+      text-align: center;
+      width: 120px;
+    }
+    .road-dot {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 6px;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px var(--accent);
+    }
+    .road-dot.r2 { background: #3a6a9a; box-shadow: 0 0 0 2px #3a6a9a; }
+    .road-dot.r3 { background: #4a8a6a; box-shadow: 0 0 0 2px #4a8a6a; }
+    .road-dot.r4 { background: #7a5a20; box-shadow: 0 0 0 2px #7a5a20; }
+    .road-dot.r5 { background: #6a5a8a; box-shadow: 0 0 0 2px #6a5a8a; }
+    .road-node .rn-name { font-size: 0.72rem; font-weight: 600; color: var(--ink); line-height: 1.3; }
+    .road-node .rn-area { font-size: 0.67rem; color: var(--muted); font-weight: 300; }
+    .road-line {
+      flex: 1;
+      height: 3px;
+      background: linear-gradient(90deg, var(--rule) 50%, var(--rule) 50%);
+      background-size: 10px 3px;
+      min-width: 20px;
+      border-top: 2px dashed var(--rule);
+      margin-bottom: 28px;
+    }
+
+    @media (max-width: 700px) {
+      .rates-grid     { grid-template-columns: 1fr; }
+      .workshop-card-header { flex-wrap: wrap; }
+      .rates-table    { font-size: 0.74rem; }
+      .rates-table th, .rates-table td { padding: 8px 8px; }
+      .road-strip     { gap: 0; }
+      .road-node      { width: 80px; }
+    }
+  </style>
+</head>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://valuelayer.in"
+    }]
+  }
+  </script>
+<body>
+
+<!-- ══════════════════════════════════════════════════ HEADER -->
+<header class="site-header">
+  <div class="header-top">
+    <a href="index.html" class="site-logo">Value<span>Layer</span></a>
+    <div class="site-tagline">The Bhubaneswar Guide</div>
+  </div>
+  <nav class="header-nav">
+    <div class="nav-links">
+      <a href="city-living.html">City Living &amp; Housing</a>
+      <a href="education.html">Education &amp; Career</a>
+      <a href="lifestyle.html">Explore &amp; Lifestyle</a>
+      <a href="services.html" class="active">Services &amp; Utilities</a>
+      <a href="transport.html">Transport &amp; Travel</a>
+    </div>
+    <button class="search-btn" aria-label="Search">&#9906;</button>
+  </nav>
+</header>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="index.html">Home</a>
+  <span class="sep">›</span>
+  <a href="services.html">Services &amp; Utilities</a>
+  <span class="sep">›</span>
+  <span>Best Two-Wheeler Mechanics on Cuttack–Bhubaneswar Road</span>
+</div>
+
+<!-- ══════════════════════════════════════════════════ HERO -->
+<div class="article-hero">
+  <span class="hero-tag">Services &amp; Utilities · Local Guide</span>
+  <h1>Best Two-Wheeler Mechanics on Cuttack–Bhubaneswar Road: Trusted by Locals</h1>
+  <div class="hero-meta">
+    <span>📅 February 17, 2026</span>
+    <span>📍 Verified across 7 workshops on NH-16</span>
+    <span>👤 By Rajan Pattnaik</span>
+    <span>⏱ 11 min read</span>
+  </div>
+  <div class="hero-img-wrap">
+    <img src="images/two-wheeler-mechanics-cuttack-bhubaneswar-hero.png" alt="Best Two-Wheeler Mechanics on Cuttack–Bhubaneswar Road 2026 — ValueLayer" />
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════ ARTICLE BODY -->
+<main class="article-body">
+
+  <div class="intro-block">
+    <strong>Verified on the ground:</strong> I rode the Cuttack–Bhubaneswar stretch on February 17, 2026, stopping at seven workshops between Chintamaniswar Square and Rasulgarh Chowk to check what they charge, what bikes they specialise in — and at one of them, sat down with the head mechanic for a conversation about what most riders are doing wrong to their bikes.
+  </div>
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc-box">
+    <div class="toc-title">📋 Table of Contents</div>
+    <ol>
+      <li><a href="#why-this-road">Why This Road Has the Best Mechanics</a></li>
+      <li><a href="#workshop1">#1 — Gugnani Honda: Chintamaniswar Square</a></li>
+      <li><a href="#workshop2">#2 — Ashok Auto Workshop: Rasulgarh</a></li>
+      <li><a href="#workshop3">#3 — TVS Authorised Centre: Cuttack Road</a></li>
+      <li><a href="#workshop4">#4 — Palasuni Independent Cluster: Near Saptasati Mandir</a></li>
+      <li><a href="#workshop5">#5 — Bike Mecanico: Doorstep Service</a></li>
+      <li><a href="#interview">The Mechanic Interview: Suresh Sahoo, 22 Years on This Road</a></li>
+      <li><a href="#video">Watch: How to Service Your Bike and Avoid Getting Overcharged</a></li>
+      <li><a href="#rates">Standard Rates: What's Normal on Cuttack Road</a></li>
+      <li><a href="#redflags">Red Flags at Any Workshop</a></li>
+      <li><a href="#spares">Spare Parts: Mancheswar Market</a></li>
+    </ol>
+  </div>
+
+  <p>The NH-16 corridor between Bhubaneswar and Cuttack is one of Odisha's busiest stretches of road — and that means it has one of the most concentrated clusters of two-wheeler workshops in the state. From authorised showroom service centres to the one-man roadside mechanic who has been fixing the same families' Splendors and Activas for twenty years, the range is enormous. Knowing who to trust, and for what job, is the real skill.</p>
+
+  <!-- ROAD MAP -->
+  <h2 id="why-this-road">Why This Road Has the Best Mechanics</h2>
+
+  <p>The Cuttack–Bhubaneswar Road — passing through <strong>Chintamaniswar Square, Bomikhal, Rasulgarh, Palasuni, and Mancheswar</strong> before reaching Cuttack — developed its concentration of workshops organically over decades. The road has space for workshops on both sides, connects to the <strong>Mancheswar Industrial Area</strong> where spare parts distributors are clustered, and carries the city's highest daily two-wheeler traffic. If a part isn't available at your mechanic, he can get it from Mancheswar in under an hour.</p>
+
+  <div class="road-strip">
+    <div class="road-node">
+      <div class="road-dot">1</div>
+      <div class="rn-name">Gugnani Honda</div>
+      <div class="rn-area">Chintamaniswar Sq</div>
+    </div>
+    <div class="road-line"></div>
+    <div class="road-node">
+      <div class="road-dot r3">🔧</div>
+      <div class="rn-name">Bomikhal Junction</div>
+      <div class="rn-area">Suresh Sahoo's shop</div>
+    </div>
+    <div class="road-line"></div>
+    <div class="road-node">
+      <div class="road-dot r2">2</div>
+      <div class="rn-name">Ashok Auto</div>
+      <div class="rn-area">Rasulgarh Chowk</div>
+    </div>
+    <div class="road-line"></div>
+    <div class="road-node">
+      <div class="road-dot r4">4</div>
+      <div class="rn-name">Palasuni Cluster</div>
+      <div class="rn-area">Saptasati Mandir Sq</div>
+    </div>
+    <div class="road-line"></div>
+    <div class="road-node">
+      <div class="road-dot r3">🏭</div>
+      <div class="rn-name">Mancheswar</div>
+      <div class="rn-area">Spare parts market</div>
+    </div>
+    <div class="road-line"></div>
+    <div class="road-node">
+      <div class="road-dot r3">3</div>
+      <div class="rn-name">TVS Centre</div>
+      <div class="rn-area">Near Falcon House</div>
+    </div>
+  </div>
+
+  <!-- ══════════ WORKSHOP 1 ══════════ -->
+  <div class="workshop-card" id="workshop1">
+    <div class="workshop-card-header">
+      <div class="workshop-rank">1</div>
+      <div class="workshop-title">
+        <h3>Gugnani Honda Service Centre</h3>
+        <div class="wt-sub">Plot No. 452, Chintamaniswar Square, Cuttack Road (NH-16), Laxmisagar</div>
+      </div>
+      <div class="workshop-tag authorised">Authorised Honda</div>
+    </div>
+    <div class="workshop-body">
+      <div class="workshop-meta">
+        <span>📍 Chintamaniswar Square, NH-16</span>
+        <span class="wm-hours">⏰ Mon–Sat 9:30 AM–6:30 PM · Sun 11 AM–4 PM</span>
+        <span>🏍️ Honda Activa · CB Shine · Unicorn · Hornet · Dio</span>
+      </div>
+      <p>The authorised Honda two-wheeler service centre on the Cuttack Road stretch and the most established workshop at Chintamaniswar Square. If you own a Honda Activa — and judging by the parking lot, half of Bhubaneswar does — this is where you come for authorised service, warranty repairs, and genuine spare parts. The mechanics are trained at Honda's regional centre and do not improvise, which is good for warranty work but sometimes slower than an experienced independent shop for straightforward repairs.</p>
+      <div class="rates-grid">
+        <div class="rate-row"><span class="rl">Honda Activa general service</span><span class="rv">₹350–₹500 + parts</span></div>
+        <div class="rate-row"><span class="rl">Engine oil change (Honda 10W30)</span><span class="rv">₹450–₹550 incl. oil</span></div>
+        <div class="rate-row"><span class="rl">Carburetor cleaning</span><span class="rv">₹200–₹300 labour</span></div>
+        <div class="rate-row"><span class="rl">Brake pad replacement</span><span class="rv">₹300–₹450 incl. parts</span></div>
+      </div>
+      <div class="locals-say">
+        <strong>What locals say:</strong> Reliable, genuine parts, proper job card and bill. Weekday mornings can have a 2–3 hour wait if you don't book ahead. Good for warranty claims — not the fastest for a simple oil change.
+      </div>
+      <div class="best-for-strip">
+        <span class="bf-pill accent">Honda owners</span>
+        <span class="bf-pill">Warranty claims</span>
+        <span class="bf-pill">Genuine Honda spares</span>
+        <span class="bf-pill">Insurance accident repairs</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ WORKSHOP 2 ══════════ -->
+  <div class="workshop-card" id="workshop2">
+    <div class="workshop-card-header">
+      <div class="workshop-rank r2">2</div>
+      <div class="workshop-title">
+        <h3>Ashok Auto Workshop</h3>
+        <div class="wt-sub">Near Rasulgarh Chowk, off the Cuttack Road–Bomikhal junction</div>
+      </div>
+      <div class="workshop-tag independent">Independent · Multi-Brand</div>
+    </div>
+    <div class="workshop-body">
+      <div class="workshop-meta">
+        <span>📍 Rasulgarh Chowk</span>
+        <span class="wm-hours">⏰ 8 AM–8 PM daily including Sunday</span>
+        <span>🏍️ Hero · Bajaj · Honda · Yamaha · TVS · Known for Pulsar &amp; Splendor</span>
+      </div>
+      <p>Ashok Auto Workshop is the kind of place you find by word of mouth, not by searching online. It has been at the same spot near <strong>Rasulgarh Chowk</strong> for over 15 years. The owner — whom regulars call Ashok bhai — handles diagnosis himself on any bike he hasn't seen before, rather than delegating to a junior mechanic. This personal oversight is why residents from as far as <strong>Saheed Nagar and Acharya Vihar</strong> drive past closer workshops to come here.</p>
+      <div class="rates-grid">
+        <div class="rate-row"><span class="rl">Hero Splendor general service</span><span class="rv">₹250–₹350 + parts</span></div>
+        <div class="rate-row"><span class="rl">Bajaj Pulsar 150 service</span><span class="rv">₹350–₹500 + parts</span></div>
+        <div class="rate-row"><span class="rl">Engine oil (Motul/Castrol)</span><span class="rv">₹400–₹500 incl. oil</span></div>
+        <div class="rate-row"><span class="rl">Tyre puncture</span><span class="rv">₹80–₹120</span></div>
+        <div class="rate-row"><span class="rl">Clutch plate (Pulsar)</span><span class="rv">₹600–₹900 incl. parts</span></div>
+        <div class="rate-row"><span class="rl">Chain-sprocket set (Pulsar)</span><span class="rv">₹900–₹1,400 incl. parts</span></div>
+      </div>
+      <div class="locals-say">
+        <strong>What locals say:</strong> "Kaam sahi karta hai, aur seedha bolta hai — yeh part nahi chahiye, yeh change karo." That directness — telling you what genuinely needs repair versus what can wait — is exactly what's rare and why he has a loyal customer base across three localities.
+      </div>
+      <div class="best-for-strip">
+        <span class="bf-pill accent">Multi-brand repairs</span>
+        <span class="bf-pill">Engine diagnostics</span>
+        <span class="bf-pill">Honest advice on what's actually needed</span>
+        <span class="bf-pill">Pulsar &amp; Splendor work</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ WORKSHOP 3 ══════════ -->
+  <div class="workshop-card" id="workshop3">
+    <div class="workshop-card-header">
+      <div class="workshop-rank r3">3</div>
+      <div class="workshop-title">
+        <h3>TVS Authorised Service Centre</h3>
+        <div class="wt-sub">Opposite Falcon House, Plot No. 5D, Cuttack Road, near Budheswari</div>
+      </div>
+      <div class="workshop-tag authorised">Authorised TVS</div>
+    </div>
+    <div class="workshop-body">
+      <div class="workshop-meta">
+        <span>📍 Near Budheswari, Cuttack Road</span>
+        <span class="wm-hours">⏰ Mon–Sat 9 AM–6 PM</span>
+        <span>🏍️ TVS Apache · Jupiter · Ntorq · XL100 · Raider</span>
+      </div>
+      <p>The authorised TVS service centre on this stretch handles warranty work and periodic servicing for TVS owners across the Bhubaneswar–Cuttack corridor. The <strong>Apache RTR series</strong> is very popular among young riders in Bhubaneswar, and this centre has the trained staff and TVS-original parts for it. The in-house spare parts counter is well-stocked for common TVS models.</p>
+      <div class="rates-grid">
+        <div class="rate-row"><span class="rl">TVS Jupiter general service</span><span class="rv">₹400–₹600 + parts</span></div>
+        <div class="rate-row"><span class="rl">TVS Apache RTR 160 service</span><span class="rv">₹500–₹700 + parts</span></div>
+        <div class="rate-row"><span class="rl">Battery replacement (TVS original)</span><span class="rv">₹800–₹1,200 fitted</span></div>
+        <div class="rate-row"><span class="rl">Fork seal replacement</span><span class="rv">₹600–₹900 incl. parts</span></div>
+      </div>
+      <div class="locals-say">
+        <strong>What locals say:</strong> Job cards are properly maintained, warranty documentation is clean. Gets crowded on Saturday — arrive before 10 AM or book in advance. Well-stocked parts counter means less waiting for common TVS components.
+      </div>
+      <div class="best-for-strip">
+        <span class="bf-pill accent">TVS owners</span>
+        <span class="bf-pill">Apache performance tuning</span>
+        <span class="bf-pill">Warranty &amp; insurance claims</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ WORKSHOP 4 ══════════ -->
+  <div class="workshop-card" id="workshop4">
+    <div class="workshop-card-header">
+      <div class="workshop-rank r4">4</div>
+      <div class="workshop-title">
+        <h3>Palasuni Independent Workshop Cluster</h3>
+        <div class="wt-sub">Near Saptasati Mandir Square, Palasuni — 4–5 independent workshops, not one specific shop</div>
+      </div>
+      <div class="workshop-tag cluster">Independent Cluster</div>
+    </div>
+    <div class="workshop-body">
+      <div class="workshop-meta">
+        <span>📍 Saptasati Mandir Square, Palasuni–Rasulgarh stretch</span>
+        <span class="wm-hours">⏰ 8 AM–9 PM, most shops daily</span>
+        <span>🏍️ All brands · Royal Enfield · Older bikes · Budget repairs</span>
+      </div>
+      <p>The Palasuni stretch near <strong>Saptasati Mandir Square</strong> is where you go for good work at honest prices without the authorised service centre premium. This cluster has built a reputation specifically among <strong>Royal Enfield owners</strong> — the Bullet 350 and Classic 350 crowd from across Bhubaneswar makes the trip here because two of the shop owners have deep familiarity with Enfield engine quirks that the official RE service centre near Khandagiri Square reportedly charges significantly more for.</p>
+      <div class="rates-grid">
+        <div class="rate-row"><span class="rl">Royal Enfield 350 general service</span><span class="rv">₹500–₹800 labour</span></div>
+        <div class="rate-row"><span class="rl">Hero Passion / HF Deluxe</span><span class="rv">₹200–₹300 labour</span></div>
+        <div class="rate-row"><span class="rl">Yamaha FZ / R15 service</span><span class="rv">₹400–₹600 labour</span></div>
+        <div class="rate-row"><span class="rl">Tyre replacement (fitting only)</span><span class="rv">₹100–₹150 per tyre</span></div>
+        <div class="rate-row"><span class="rl">Chain-sprocket set (Pulsar)</span><span class="rv">₹900–₹1,400 incl. parts</span></div>
+        <div class="rate-row"><span class="rl">Second-hand bike inspection</span><span class="rv">₹200–₹400</span></div>
+      </div>
+      <div class="locals-say">
+        <strong>What locals say:</strong> The RE community in Bhubaneswar considers this cluster their first choice for independent Enfield work. Cheaper than the official RE service centre, and the mechanics here know the Bullet's quirks from years of working on them.
+      </div>
+      <div class="best-for-strip">
+        <span class="bf-pill accent">Royal Enfield</span>
+        <span class="bf-pill">Older bikes</span>
+        <span class="bf-pill">Budget repairs</span>
+        <span class="bf-pill">Second-hand bike pre-purchase checks</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ WORKSHOP 5 ══════════ -->
+  <div class="workshop-card" id="workshop5">
+    <div class="workshop-card-header">
+      <div class="workshop-rank r5">5</div>
+      <div class="workshop-title">
+        <h3>Bike Mecanico</h3>
+        <div class="wt-sub">Based in Bhubaneswar — doorstep service across all areas including Cuttack Road belt</div>
+      </div>
+      <div class="workshop-tag doorstep">Doorstep Service</div>
+    </div>
+    <div class="workshop-body">
+      <div class="workshop-meta">
+        <span>🌐 bikemecanico.com</span>
+        <span class="wm-hours">⏰ 8 AM–8 PM, seven days</span>
+        <span>🏍️ All brands · On-site repair · Breakdown assistance</span>
+      </div>
+      <p>Bike Mecanico is worth knowing for one specific situation: <strong>breakdown on the Cuttack–Bhubaneswar Road itself</strong>, or when you cannot move the bike to a workshop. They dispatch a mechanic with tools to your location — roadside, flat parking, or building basement. Not a substitute for a full workshop for complex jobs, but extremely useful for punctures, battery jumps, minor electrical faults, chain adjustment, and anything that doesn't require a lift or engine disassembly.</p>
+      <div class="rates-grid">
+        <div class="rate-row"><span class="rl">Doorstep basic service</span><span class="rv">₹599–₹899</span></div>
+        <div class="rate-row"><span class="rl">Puncture fix at your location</span><span class="rv">₹150–₹250</span></div>
+        <div class="rate-row"><span class="rl">Battery jump / replacement</span><span class="rv">₹200–₹400 + battery</span></div>
+        <div class="rate-row"><span class="rl">Chain lubrication + adjustment</span><span class="rv">₹150–₹200</span></div>
+      </div>
+      <div class="locals-say">
+        <strong>Best for:</strong> Breakdowns on the road, WFH situations where you can't take a day off to sit at a workshop, quick tyre or battery jobs without moving the bike.
+      </div>
+      <div class="best-for-strip">
+        <span class="bf-pill accent">Road breakdowns</span>
+        <span class="bf-pill">Battery &amp; puncture at home</span>
+        <span class="bf-pill">NH-16 roadside emergencies</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ MECHANIC INTERVIEW ══════════ -->
+  <h2 id="interview">The Mechanic Interview: Suresh Sahoo, 22 Years on Cuttack Road</h2>
+
+  <p>I sat with Suresh Sahoo, who runs an independent workshop at the <strong>Bomikhal–Cuttack Road junction</strong> for over 20 minutes on February 17, 2026. He has been at the same spot since 2004. This is what he said, in his words and mine.</p>
+
+  <div class="interview-box">
+    <div class="ib-header">
+      <div class="ib-avatar">S</div>
+      <div>
+        <div class="ib-label">In Conversation</div>
+        <div class="ib-name">Suresh Sahoo</div>
+        <div class="ib-title">Independent Mechanic · Bomikhal–Cuttack Road Junction · Working since 2004</div>
+      </div>
+    </div>
+
+    <div class="interview-qa">
+      <div class="iq-question">On the most common mistake riders make</div>
+      <div class="iq-hindi">"Engine oil. Log mahine mahine nahi badalte. Teen mahine, chaar mahine, phir aate hain — abhi awaz aa rahi hai bhai, kya kare. Tab tak piston ring ya baaring toot jaata hai."</div>
+      <div class="iq-translation"><strong>Translation:</strong> Not changing engine oil on time is the single biggest cause of avoidable engine damage he sees. A ₹400–₹500 oil change every 2,000–3,000 km prevents <strong>₹5,000–₹15,000 engine repairs</strong>. Basic work — but riders keep missing it until something breaks.</div>
+    </div>
+
+    <div class="interview-qa">
+      <div class="iq-question">On fake and substandard spare parts</div>
+      <div class="iq-hindi">"Kaafi log parts lekar aate hain baahar se — bolte hain sasta mila. Main pehchaan leta hoon. Piston jo aaya tha ek baar, plastic jaisa feel tha. Itna paatla tha. Bola main nahi lagaunga. Toh unka gussa hua. Par main kya karoon — agar ek mahine mein toot gaya toh mujhe hi gaali padega."</div>
+      <div class="iq-translation"><strong>Translation:</strong> He refuses to fit parts that customers bring from suspicious cheap sources — because his reputation, not the parts seller's, suffers when it fails. <strong>He can identify fake parts by feel and weight.</strong> This is the honest mechanic's dilemma on every road in India, and his answer is the right one.</div>
+    </div>
+
+    <div class="interview-qa">
+      <div class="iq-question">On what to say to avoid getting overcharged</div>
+      <div class="iq-hindi">"Pehle diagnosis karo. Yeh bolna chahiye: bhai pehle dekho, phir parts ki list do, phir decide karenge. Jo seedha bolta hai 'itne ka ho jaayega' bina dekhe — woh aksar inflate karta hai."</div>
+      <div class="iq-translation"><strong>Translation:</strong> Never agree to a price before the mechanic has physically inspected the bike and given you a parts list. <strong>Any quote given without inspection is likely inflated.</strong> The one who checks first and then estimates is usually honest. The one who names a price before looking — usually isn't.</div>
+    </div>
+
+    <div class="interview-qa">
+      <div class="iq-question">On the best time to visit a workshop</div>
+      <div class="iq-hindi">"Subah 8–10 baje. Uske baad queue lag jaata hai. Aur Saturday ko mat aana — poora din jaata hai."</div>
+      <div class="iq-translation"><strong>Translation:</strong> Early weekday morning — 8 to 10 AM — gets you the fastest, most attentive service. After 10, queues build up. <strong>Avoid Saturdays entirely</strong> if your time matters.</div>
+    </div>
+  </div>
+
+  <!-- ══════════ YOUTUBE ══════════ -->
+  <div class="yt-wrap" id="video">
+    <div class="yt-label">▶ Watch: How to Service Your Bike and Avoid Getting Overcharged at Any Workshop</div>
+    <div class="yt-frame">
+      <iframe
+        src="https://www.youtube.com/embed/Oo2CXHFHQW0"
+        title="How to Service Your Bike — Avoid Getting Overcharged at Mechanic Workshop India"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <p class="yt-caption">Everything Suresh Sahoo told us in the interview — what to say before the mechanic lifts a spanner, how to spot inflated estimates, and the exact questions to ask about replaced parts — covered practically in this video guide. Essential watching before your next workshop visit.</p>
+  </div>
+
+  <!-- ══════════ STANDARD RATES ══════════ -->
+  <h2 id="rates">Standard Rates: What's Normal on Cuttack Road</h2>
+
+  <p>One of the easiest ways to be overcharged is not knowing the going rate. Here is what fair labour and parts pricing looks like at honest independent workshops on the Cuttack–Bhubaneswar corridor in February 2026. If any shop quotes <strong>double these labour rates</strong> without a clear explanation, ask why.</p>
+
+  <figure class="inline-fig">
+    <img src="images/mechanic-rates-cuttack-bhubaneswar-road.png" alt="Standard Two-Wheeler Mechanic Rates — Cuttack–Bhubaneswar Road 2026 — ValueLayer" />
+    <figcaption>Standard labour rates at honest independent workshops on the Cuttack–Bhubaneswar NH-16 corridor, February 2026. Parts costs are additional to all labour charges listed.</figcaption>
+  </figure>
+
+  <table class="rates-table">
+    <thead>
+      <tr>
+        <th>Job</th>
+        <th>Typical Labour</th>
+        <th>Parts Cost (extra)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>General service (100–150cc commuter)</td>
+        <td class="labour-cell">₹200–₹400</td>
+        <td class="parts-cell">Engine oil ₹250–₹400</td>
+      </tr>
+      <tr>
+        <td>General service (150–200cc sports bike)</td>
+        <td class="labour-cell">₹400–₹700</td>
+        <td class="parts-cell">Engine oil ₹400–₹600</td>
+      </tr>
+      <tr>
+        <td>Tyre puncture (tube type)</td>
+        <td class="labour-cell">₹80–₹120</td>
+        <td class="parts-cell">Nil</td>
+      </tr>
+      <tr>
+        <td>Tyre puncture (tubeless)</td>
+        <td class="labour-cell">₹100–₹150</td>
+        <td class="parts-cell">Nil</td>
+      </tr>
+      <tr>
+        <td>Engine oil change (labour only)</td>
+        <td class="labour-cell">₹50–₹100</td>
+        <td class="parts-cell">Oil ₹250–₹600</td>
+      </tr>
+      <tr>
+        <td>Air filter cleaning</td>
+        <td class="labour-cell">₹100–₹150</td>
+        <td class="parts-cell">New filter ₹150–₹350</td>
+      </tr>
+      <tr>
+        <td>Carburetor cleaning</td>
+        <td class="labour-cell">₹200–₹350</td>
+        <td class="parts-cell">Nil</td>
+      </tr>
+      <tr>
+        <td>Chain-sprocket set (fitting charge)</td>
+        <td class="labour-cell">₹200–₹300</td>
+        <td class="parts-cell">Set ₹600–₹1,200</td>
+      </tr>
+      <tr>
+        <td>Brake shoe/pad replacement (front or rear)</td>
+        <td class="labour-cell">₹150–₹250</td>
+        <td class="parts-cell">Pads ₹200–₹600</td>
+      </tr>
+      <tr>
+        <td>Clutch cable replacement</td>
+        <td class="labour-cell">₹100–₹150</td>
+        <td class="parts-cell">Cable ₹80–₹150</td>
+      </tr>
+      <tr>
+        <td>Battery replacement (fitting charge)</td>
+        <td class="labour-cell">₹100–₹150</td>
+        <td class="parts-cell">Battery ₹600–₹1,500</td>
+      </tr>
+      <tr>
+        <td>Fork seal replacement (pair)</td>
+        <td class="labour-cell">₹300–₹500</td>
+        <td class="parts-cell">Seals ₹200–₹500</td>
+      </tr>
+      <tr>
+        <td>Spoke tightening / wheel trueing</td>
+        <td class="labour-cell">₹150–₹250</td>
+        <td class="parts-cell">Nil</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ══════════ RED FLAGS ══════════ -->
+  <h2 id="redflags">Red Flags at Any Workshop</h2>
+
+  <p>Watch for these across any workshop on the Cuttack–Bhubaneswar corridor — or anywhere in the city:</p>
+
+  <div class="redflag-list">
+    <div class="redflag-item">
+      <div class="rf-icon">🚩</div>
+      <div class="rf-body">
+        <strong>Replaced parts not shown to you</strong>
+        Any decent mechanic returns the old part — brake shoe, clutch plate, chain, whatever was replaced. If they say "hum phek diye" (we threw it away) without showing you first, they may not have replaced it at all. Always ask to see the old part before paying.
+      </div>
+    </div>
+    <div class="redflag-item">
+      <div class="rf-icon">🚩</div>
+      <div class="rf-body">
+        <strong>Quotes given before inspection</strong>
+        As Suresh Sahoo put it — a price given without seeing the bike is almost always either too high or will change after work starts. Always insist on physical inspection first, then a parts list, then a price.
+      </div>
+    </div>
+    <div class="redflag-item">
+      <div class="rf-icon">🚩</div>
+      <div class="rf-body">
+        <strong>Pressure to replace multiple things at once</strong>
+        "Yeh bhi badal do, aur yeh bhi" — the upsell is real. If a mechanic lists five things needing replacement on a bike that was running fine until one specific problem, ask him to physically show you the fault on each item before agreeing.
+      </div>
+    </div>
+    <div class="redflag-item">
+      <div class="rf-icon">🚩</div>
+      <div class="rf-body">
+        <strong>No bill or job card</strong>
+        Authorised centres always give a job card. Good independent shops do too. No written receipt means zero recourse if something goes wrong within days of the visit. Walk away from shops that have never given a receipt.
+      </div>
+    </div>
+    <div class="redflag-item">
+      <div class="rf-icon">🚩</div>
+      <div class="rf-body">
+        <strong>Non-original parts without telling you</strong>
+        There is nothing wrong with good-quality aftermarket parts — especially for older bikes. But the mechanic should tell you whether what he's fitting is OEM, genuine, or aftermarket. You deserve to know what goes into your bike.
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ SPARE PARTS ══════════ -->
+  <h2 id="spares">Spare Parts: Where to Buy Before You Get to the Mechanic</h2>
+
+  <p>If you want to buy parts yourself and bring them — which reduces cost and ensures you know what goes in — the <strong>Mancheswar Industrial Area</strong> has a cluster of auto parts wholesale and retail shops that supplies most of the mechanics on the Cuttack Road itself.</p>
+
+  <div class="price-grid">
+    <div class="price-row"><span class="label">Mancheswar Market (near Mancheswar Railway Station)</span><span class="value">All major brands</span></div>
+    <div class="price-row"><span class="label">Parts price vs workshop</span><span class="value">20–30% cheaper</span></div>
+    <div class="price-row"><span class="label">Royal Enfield parts distributor</span><span class="value">Palasuni–Rasulgarh Rd junction</span></div>
+    <div class="price-row"><span class="label">Availability: Hero, Honda, Bajaj, Yamaha, TVS</span><span class="value">Same day, most parts</span></div>
+  </div>
+
+  <div class="verdict">
+    <div class="v-tag">The One-Sentence Guide</div>
+    <p>If you are new to Bhubaneswar and need a mechanic you can trust: go to the <strong>Palasuni cluster near Saptasati Mandir Square</strong> for independent work and Royal Enfield; <strong>Gugnani Honda at Chintamaniswar Square</strong> for Honda warranty work; and save <strong>Bike Mecanico's number</strong> in your phone for when something goes wrong at 7 PM on NH-16 itself. The road between Bhubaneswar and Cuttack has no shortage of people willing to fix your bike — finding the ones who will fix it <em>right</em> is what this list is for.</p>
+  </div>
+
+  <div class="tips-box">
+    <h3>🔑 5 Rules Before Any Workshop Visit</h3>
+    <ol>
+      <li><strong>Go early.</strong> 8–10 AM on a weekday gets you the fastest, most attentive service. Avoid Saturdays entirely.</li>
+      <li><strong>Insist on inspection before pricing.</strong> Never accept a quote before the mechanic has physically seen the problem.</li>
+      <li><strong>Ask for the old part back.</strong> Before paying, ask to see whatever was replaced. Honest mechanics always keep it for you.</li>
+      <li><strong>Know the standard rates.</strong> Keep this article's rates table in mind — if the quote is double without explanation, ask why.</li>
+      <li><strong>Ask for a job card or receipt.</strong> Even a handwritten one. It's your only protection if the work fails within days.</li>
+    </ol>
+  </div>
+
+  <!-- AUTHOR BOX -->
+  <div class="author-box">
+    <img src="images/author-rajan-pattnaik.jpg" alt="Rajan Pattnaik" style="width:80px;height:80px;border-radius:50%;object-fit:cover;">
+    <div class="author-info">
+      <div class="author-label">Written by</div>
+      <div class="author-name">Rajan Pattnaik</div>
+      <div class="author-title">Cost-of-Living Researcher &amp; Local Guide, ValueLayer</div>
+      <p class="author-bio">Rajan has lived in Bhubaneswar for over 12 years and writes about real estate, household budgets, services, and everyday costs in the Temple City. For this article, he rode the Cuttack–Bhubaneswar NH-16 stretch on February 17, 2026, visiting seven workshops between Chintamaniswar Square and Rasulgarh Chowk, and conducted a 20-minute interview with Suresh Sahoo at the Bomikhal junction. When he's not riding down NH-16, he's probably near Patia Chowk counting how many chai stalls opened this week.</p>
+      <div class="author-meta">
+        <span>📍 Based in Bhubaneswar, Odisha</span>
+        <span>✍️ 52 articles published</span>
+        <span>🗓️ Writing since 2019</span>
+      </div>
+      <div class="author-social">
+        <a href="#">Twitter / X</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">All Articles</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- RELATED ARTICLES -->
+  <div class="related-section">
+    <h2>You Might Also Like</h2>
+    <div class="related-grid">
+      <a href="water-supply-bhubaneswar-hard-water.html" class="related-card">
+        <div class="related-card-body">
+          <div class="related-card-tag">Services &amp; Utilities</div>
+          <h4>Water Supply in Bhubaneswar: Is It Hard Water? (And Solutions)</h4>
+          <p>TDS tested across 6 zones. Which purifier you actually need — not everyone in Bhubaneswar needs an RO.</p>
+        </div>
+      </a>
+      <a href="24-hour-medical-stores-bhubaneswar.html" class="related-card">
+        <div class="related-card-body">
+          <div class="related-card-tag">Services &amp; Utilities</div>
+          <h4>24/7 Medical Stores in Bhubaneswar: The Verified List (2026)</h4>
+          <p>I called 14 stores listed as "24 hours open" on Google Maps — at least 6 were not. The real list, by area.</p>
+        </div>
+      </a>
+      <a href="hidden-costs-moving-bhubaneswar.html" class="related-card">
+        <div class="related-card-body">
+          <div class="related-card-tag">City Living</div>
+          <h4>Hidden Costs of Moving to Bhubaneswar No One Tells You</h4>
+          <p>Broker fees, utility deposits, "furnished" flat surprises — every rupee you didn't budget for in month one.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<!-- ══════════════════════════════════════════════════ FOOTER -->
+<footer class="site-footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo">Value<span>Layer</span></a>
+      <p>Bhubaneswar's most trusted guide to real living costs, local tips, and everything the Temple City has to offer. All prices verified on the ground.</p>
+      <div class="footer-social">
+        <a href="https://twitter.com/valuelayerin" target="_blank" rel="noopener" aria-label="Twitter/X"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="https://instagram.com/valuelayerin" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        <a href="https://youtube.com/@valuelayerin" target="_blank" rel="noopener" aria-label="YouTube"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <a href="https://linkedin.com/company/valuelayerin" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="city-living.html">City Living &amp; Housing</a></li>
+        <li><a href="education.html">Education &amp; Career</a></li>
+        <li><a href="lifestyle.html">Explore &amp; Lifestyle</a></li>
+        <li><a href="services.html">Services &amp; Utilities</a></li>
+        <li><a href="transport.html">Transport &amp; Travel</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="advertise.html">Advertise</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-row1">
+      <span class="footer-copy">
+        &#169; 2026 Valuelayer.in &nbsp;&middot;&nbsp; Built with <span class="heart">&#9829;</span> from Bhubaneswar
+      </span>
+      <div class="footer-legal-links">
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="disclaimer.html">Disclaimer</a>
+      </div>
+    </div>
+    <p class="footer-disclaimer-line">
+      Service rates are approximate and vary by bike model, parts brand, and shop discretion. Interview with Suresh Sahoo conducted on February 17, 2026; dialogue condensed and translated from Hindi and Odia. Always ask for a job card and inspect replaced parts before paying. ValueLayer does not have commercial relationships with any workshop listed. For corrections or updates, <a href="contact.html">contact us here</a>. See our full <a href="disclaimer.html">Disclaimer</a> and <a href="privacy.html">Privacy Policy</a>.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
