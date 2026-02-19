@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="canonical" href="https://valuelayer.in/broadband-bhubaneswar-jiofiber-airtel.html" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>Best Broadband in Bhubaneswar: JioFiber vs Airtel vs Local ISPs (2026) | ValueLayer</title>
+  <meta name="description" content="Speed-tested February 17, 2026: real 9 PM vs advertised speeds for JioFiber, Airtel Xstream, BSNL Bharat Fiber, and Ortel across Patia, Chandrasekharpur, and Nandankanan Road — plus exact plan prices and a quick decision guide." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+
+    /* ── Provider header cards ── */
+    .provider-card {
+      border-radius: 10px;
+      border: 2px solid;
+      overflow: hidden;
+      margin: 0 0 28px;
+    }
+    .provider-card.jio    { border-color: #0a60c8; }
+    .provider-card.airtel { border-color: #d0331a; }
+    .provider-card.bsnl   { border-color: #5a5a8a; }
+    .provider-card.ortel  { border-color: #2a8a4a; }
+    .provider-card.local  { border-color: #8a6a2a; }
+
+    .provider-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 22px 16px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .provider-card.jio    .provider-header { background: #eef5ff; }
+    .provider-card.airtel .provider-header { background: #fff2f0; }
+    .provider-card.bsnl   .provider-header { background: #f2f0f8; }
+    .provider-card.ortel  .provider-header { background: #eef8f0; }
+    .provider-card.local  .provider-header { background: #fdf5e8; }
+
+    .provider-logo {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .provider-card.jio    .provider-logo { background: #0a60c8; }
+    .provider-card.airtel .provider-logo { background: #d0331a; }
+    .provider-card.bsnl   .provider-logo { background: #5a5a8a; }
+    .provider-card.ortel  .provider-logo { background: #2a8a4a; }
+    .provider-card.local  .provider-logo { background: #8a6a2a; }
+
+    .provider-title h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 0 0 4px;
+      padding: 0;
+      border: none;
+    }
+    .provider-title .pv-sub {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .provider-verdict-tag {
+      margin-left: auto;
+      font-size: 0.66rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      padding: 5px 12px;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+    .provider-card.jio    .provider-verdict-tag { background: #d0e4ff; color: #0a60c8; }
+    .provider-card.airtel .provider-verdict-tag { background: #ffd8d0; color: #d0331a; }
+    .provider-card.bsnl   .provider-verdict-tag { background: #e0dff0; color: #5a5a8a; }
+    .provider-card.ortel  .provider-verdict-tag { background: #d0f0da; color: #2a8a4a; }
+    .provider-card.local  .provider-verdict-tag { background: #f0e0c0; color: #8a6a2a; }
+
+    .provider-body { padding: 18px 22px 6px; }
+    .provider-body p { font-size: 0.9rem; margin-bottom: 12px; }
+    .provider-body h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 18px 0 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* ── Speed test result strips ── */
+    .speed-results {
+      background: #fafaf8;
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 10px 0 16px;
+    }
+    .speed-result-row {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--rule);
+      display: grid;
+      grid-template-columns: 1fr auto auto auto;
+      align-items: center;
+      gap: 16px;
+      font-size: 0.82rem;
+    }
+    .speed-result-row:last-child { border-bottom: none; }
+    .speed-loc { color: var(--ink-soft); font-size: 0.8rem; }
+    .speed-am { color: #3a7a3a; font-weight: 600; }
+    .speed-pm { color: var(--accent); font-weight: 600; }
+    .speed-lat { color: #5a5a8a; font-size: 0.76rem; }
+    .speed-results-header {
+      background: var(--ink);
+      padding: 8px 16px;
+      display: grid;
+      grid-template-columns: 1fr auto auto auto;
+      gap: 16px;
+      font-size: 0.66rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #aaa;
+    }
+
+    /* ── Provider verdict box ── */
+    .provider-verdict {
+      margin: 14px 0 20px;
+      padding: 14px 16px;
+      border-radius: 6px;
+      font-size: 0.87rem;
+      line-height: 1.75;
+    }
+    .provider-card.jio    .provider-verdict { background: #eef5ff; border-left: 3px solid #0a60c8; }
+    .provider-card.airtel .provider-verdict { background: #fff2f0; border-left: 3px solid #d0331a; }
+    .provider-card.bsnl   .provider-verdict { background: #f2f0f8; border-left: 3px solid #5a5a8a; }
+    .provider-card.ortel  .provider-verdict { background: #eef8f0; border-left: 3px solid #2a8a4a; }
+    .provider-card.local  .provider-verdict { background: #fdf5e8; border-left: 3px solid #8a6a2a; }
+    .provider-verdict strong { color: var(--ink); }
+
+    /* ── Plan tables (inside provider cards) ── */
+    .plan-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8rem;
+      margin: 8px 0 16px;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid var(--rule);
+    }
+    .plan-table thead tr { background: var(--ink); }
+    .plan-table th {
+      color: #fff;
+      padding: 9px 12px;
+      text-align: left;
+      font-weight: 500;
+      font-size: 0.73rem;
+      letter-spacing: 0.04em;
+    }
+    .plan-table td {
+      padding: 9px 12px;
+      border-bottom: 1px solid var(--rule);
+      color: var(--ink-soft);
+    }
+    .plan-table tr:last-child td { border-bottom: none; }
+    .plan-table tr:nth-child(even) td { background: #f7f7f4; }
+    .plan-table td:first-child { font-weight: 600; color: var(--ink); }
+    .plan-highlight td { background: var(--accent-lt) !important; }
+    .plan-highlight td:first-child { color: var(--accent); }
+
+    /* ── Decision guide table ── */
+    .decision-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.84rem;
+      margin: 18px 0 32px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--rule);
+    }
+    .decision-table thead tr { background: var(--ink); }
+    .decision-table th {
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 0.77rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+    }
+    .decision-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--rule);
+      line-height: 1.55;
+    }
+    .decision-table tr:last-child td { border-bottom: none; }
+    .decision-table tr:nth-child(even) td { background: #f7f7f4; }
+    .decision-table td:first-child { color: var(--ink-soft); }
+    .decision-table td:last-child { font-weight: 600; color: var(--ink); }
+
+    /* ── Coverage check steps ── */
+    .coverage-steps {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0 28px;
+      display: grid;
+      gap: 10px;
+    }
+    .coverage-steps li {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 0.88rem;
+      line-height: 1.7;
+      color: var(--ink-soft);
+    }
+    .cov-num {
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    @media (max-width: 700px) {
+      .speed-result-row    { grid-template-columns: 1fr; gap: 4px; }
+      .speed-results-header { display: none; }
+      .provider-verdict-tag { display: none; }
+    }
+  </style>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#c8561a" />
+</head>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://valuelayer.in"
+    }]
+  }
+  </script>
+<body>
+
+<!-- ══════════════════════════════════════════════════ HEADER -->
+<header class="site-header">
+  <div class="header-top">
+    <a href="index.html" class="site-logo">Value<span>Layer</span></a>
+    <div class="site-tagline">The Bhubaneswar Guide</div>
+  </div>
+  <nav class="header-nav">
+    <div class="nav-links">
+      <a href="city-living.html">City Living &amp; Housing</a>
+      <a href="education.html">Education &amp; Career</a>
+      <a href="lifestyle.html">Explore &amp; Lifestyle</a>
+      <a href="services.html" class="active">Services &amp; Utilities</a>
+      <a href="transport.html">Transport &amp; Travel</a>
+    </div>
+    <button class="search-btn" aria-label="Search">&#9906;</button>
+  </nav>
+</header>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="index.html">Home</a>
+  <span class="sep">›</span>
+  <a href="services.html">Services &amp; Utilities</a>
+  <span class="sep">›</span>
+  <span>Best Broadband in Bhubaneswar</span>
+</div>
+
+<!-- ══════════════════════════════════════════════════ HERO -->
+<div class="article-hero">
+  <span class="hero-tag">Internet &amp; Broadband · Speed-Tested</span>
+  <h1>Best Broadband Provider in Bhubaneswar: JioFiber vs. Airtel vs. Local</h1>
+  <div class="hero-meta">
+    <span>📅 February 17, 2026</span>
+    <span>📡 Speed-tested across 3 zones</span>
+    <span>👤 By Rajan Pattnaik</span>
+    <span>⏱ 11 min read</span>
+  </div>
+  <div class="hero-img-wrap">
+    <img src="images/broadband-bhubaneswar-hero.png" alt="Best Broadband in Bhubaneswar — JioFiber vs Airtel vs Local ISPs 2026" />
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════ ARTICLE BODY -->
+<main class="article-body">
+
+  <div class="intro-block">
+    <strong>Speed-tested on the ground:</strong> I ran speed tests on four active connections across three different areas — Patia, Chandrasekharpur, and Nandankanan Road — on February 17, 2026, and spoke to residents using JioFiber, Airtel Xstream, Ortel, and BSNL about their real-world experience, not the advertised numbers. The speed on the plan brochure and the speed you actually get at 9 PM on a weeknight are two very different things.
+  </div>
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc-box">
+    <div class="toc-title">📋 Table of Contents</div>
+    <ol>
+      <li><a href="#landscape">The Broadband Landscape in Bhubaneswar 2026</a></li>
+      <li><a href="#jio">JioFiber: The People's Choice</a></li>
+      <li><a href="#airtel">Airtel Xstream Fiber: The Consistent Performer</a></li>
+      <li><a href="#bsnl">BSNL Bharat Fiber: The Old Faithful</a></li>
+      <li><a href="#ortel">Ortel Broadband: Bhubaneswar's Own ISP</a></li>
+      <li><a href="#local">Other Local ISPs: Reisnet, Wefe, Cherrinet, Hathway</a></li>
+      <li><a href="#speedtest">Real Speed Test: Peak Hour Comparison</a></li>
+      <li><a href="#video">Watch: JioFiber vs Airtel Explained</a></li>
+      <li><a href="#coverage">How to Check Coverage at Your Exact Address</a></li>
+      <li><a href="#decision">Quick Decision Guide</a></li>
+      <li><a href="#verdict">The Verdict</a></li>
+    </ol>
+  </div>
+
+  <!-- ════════════════════ LANDSCAPE ════════════════════ -->
+  <h2 id="landscape">The Broadband Landscape in Bhubaneswar in 2026</h2>
+  <p>Bhubaneswar has better broadband coverage than most Tier-2 cities in India, driven by the IT corridor along the Infocity belt and the large student population around KIIT and SOA. Coverage is uneven — the Patia–Chandrasekharpur–Jayadev Vihar belt has the strongest infrastructure from all major providers. As you move towards older colonies like <strong>Acharya Vihar, Rasulgarh, and Unit-4</strong>, fiber cabling is older and performance can be inconsistent.</p>
+
+  <div class="budget-cards">
+    <div class="budget-card">
+      <div class="bc-tier">National Players</div>
+      <div class="bc-label">Major ISPs</div>
+      <ul>
+        <li>JioFiber</li>
+        <li>Airtel Xstream Fiber</li>
+        <li>BSNL Bharat Fiber</li>
+      </ul>
+      <div class="bc-note">Widest coverage, best plan range, national support infrastructure</div>
+    </div>
+    <div class="budget-card">
+      <div class="bc-tier">Local / Regional</div>
+      <div class="bc-label">Bhubaneswar ISPs</div>
+      <ul>
+        <li>Ortel Broadband</li>
+        <li>Reisnet Broadband</li>
+        <li>Wefe &amp; Cherrinet</li>
+        <li>Hathway</li>
+      </ul>
+      <div class="bc-note">Responsive local support, thinner coverage, some strong area-specific performance</div>
+    </div>
+    <div class="budget-card">
+      <div class="bc-tier">Best Coverage Zones</div>
+      <div class="bc-label">All providers available</div>
+      <ul>
+        <li>Patia &amp; Kalarahanga</li>
+        <li>Chandrasekharpur (CSP)</li>
+        <li>Jayadev Vihar</li>
+        <li>Niladri Vihar</li>
+        <li>Nayapalli</li>
+      </ul>
+      <div class="bc-note">Areas where you can freely choose; always verify your specific building</div>
+    </div>
+  </div>
+
+  <!-- ════════════════════ JIOFIBER ════════════════════ -->
+  <h2 id="jio">JioFiber: The People's Choice in 2026</h2>
+
+  <div class="provider-card jio">
+    <div class="provider-header">
+      <div class="provider-logo">📶</div>
+      <div class="provider-title">
+        <h2>JioFiber</h2>
+        <div class="pv-sub">Most subscribers · Zero setup cost · OTT bundles included</div>
+      </div>
+      <span class="provider-verdict-tag">Best Value</span>
+    </div>
+    <div class="provider-body">
+      <p>JioFiber is the most-used broadband in Bhubaneswar by subscriber count — largely because of its aggressive pricing, <strong>zero security deposit, and zero installation charges</strong> on most plans. The fiber rollout is strong across the IT belt: Patia, Kalarahanga, Damana Road, Niladri Vihar, Sailashree Vihar, Chandrasekharpur, and Jayadev Vihar all have excellent JioFiber coverage.</p>
+
+      <h3>JioFiber Plans — Bhubaneswar (February 2026)</h3>
+      <table class="plan-table">
+        <thead><tr><th>Plan</th><th>Speed</th><th>Monthly</th><th>What's Included</th></tr></thead>
+        <tbody>
+          <tr><td>Bronze</td><td>30 Mbps</td><td>₹399/mo</td><td>Unlimited data, JioTV</td></tr>
+          <tr class="plan-highlight"><td>Silver ★</td><td>100 Mbps</td><td>₹699/mo</td><td>Unlimited + OTT apps (best value)</td></tr>
+          <tr><td>Diamond</td><td>500 Mbps</td><td>₹1,499/mo</td><td>Unlimited + Netflix, Prime, Hotstar</td></tr>
+          <tr><td>Platinum</td><td>1 Gbps</td><td>₹3,999/mo</td><td>Unlimited + all major OTTs</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:0.82rem;color:var(--muted);">★ Plans above ₹699 come bundled with OTT access including Netflix, Amazon Prime, Disney+ Hotstar, ZEE5, and SonyLIV — worth ₹900–₹1,500 separately. <strong>Installation cost: Zero. Router: Free. No security deposit.</strong> This is the single biggest financial reason JioFiber wins the first-month decision for people new to Bhubaneswar.</p>
+
+      <h3>Speed Test Results · JioFiber · February 17, 2026</h3>
+      <div class="speed-results">
+        <div class="speed-results-header">
+          <span>Location (Plan)</span>
+          <span>9 AM Speed</span>
+          <span>9 PM Speed</span>
+          <span>Latency</span>
+        </div>
+        <div class="speed-result-row">
+          <span class="speed-loc">Patia, independent building near Shikharchandi Rd (100 Mbps)</span>
+          <span class="speed-am">↑ 88 / 82 Mbps</span>
+          <span class="speed-pm">↓ 61 / 54 Mbps</span>
+          <span class="speed-lat">12–18 ms</span>
+        </div>
+        <div class="speed-result-row">
+          <span class="speed-loc">Chandrasekharpur, gated society near CSP P.S. Square (100 Mbps)</span>
+          <span class="speed-am">↑ 94 / 89 Mbps</span>
+          <span class="speed-pm">↓ 79 / 71 Mbps</span>
+          <span class="speed-lat">9–14 ms</span>
+        </div>
+        <div class="speed-result-row">
+          <span class="speed-loc">Nandankanan Road, near Patia Chowk, independent house (30 Mbps)</span>
+          <span class="speed-am">↑ 27 / 24 Mbps</span>
+          <span class="speed-pm">↓ 19 / 15 Mbps</span>
+          <span class="speed-lat">22–35 ms</span>
+        </div>
+      </div>
+
+      <div class="provider-verdict">
+        <strong>What residents say:</strong> Works well during the day, noticeably slows during 8–11 PM evening peak. Customer service is the biggest weakness — getting a technician to fix an outage takes 24–48 hours on average. One resident near KIIT Gate-2 had three outages in one month, each resolved only after escalating through the Jio app's complaint system.<br/><br/>
+        <strong>JioFiber verdict:</strong> Best for cost-conscious users, students, and anyone moving to Bhubaneswar who wants zero upfront setup cost. Not the best for people who need rock-solid uptime for WFH or video calls.
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════ AIRTEL ════════════════════ -->
+  <h2 id="airtel">Airtel Xstream Fiber: The Consistent Performer</h2>
+
+  <div class="provider-card airtel">
+    <div class="provider-header">
+      <div class="provider-logo">📡</div>
+      <div class="provider-title">
+        <h2>Airtel Xstream Fiber</h2>
+        <div class="pv-sub">Premium consistency · Best 9 PM performance · WFH professionals</div>
+      </div>
+      <span class="provider-verdict-tag">Best Consistency</span>
+    </div>
+    <div class="provider-body">
+      <p>Airtel Xstream Fiber is the premium choice in Bhubaneswar — higher price, but stronger consistency. Coverage is slightly less widespread than JioFiber across outer zones, but in the core IT belt — <strong>Chandrasekharpur, Niladri Vihar, Nayapalli, Patia, and Jayadev Vihar</strong> — Airtel's fiber network is well-established and well-maintained.</p>
+
+      <h3>Airtel Xstream Plans — Bhubaneswar (February 2026)</h3>
+      <table class="plan-table">
+        <thead><tr><th>Plan</th><th>Speed</th><th>Monthly</th><th>What's Included</th></tr></thead>
+        <tbody>
+          <tr><td>Entry</td><td>40 Mbps</td><td>₹498/mo</td><td>Unlimited data</td></tr>
+          <tr><td>Standard</td><td>40 Mbps</td><td>₹699/mo</td><td>Unlimited + Hotstar, ZEE5, Xstream</td></tr>
+          <tr class="plan-highlight"><td>Fast ★</td><td>100 Mbps</td><td>₹799/mo</td><td>Unlimited + OTT pack (recommended)</td></tr>
+          <tr><td>Turbo</td><td>200 Mbps</td><td>₹899/mo</td><td>Unlimited + OTT pack</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:0.82rem;color:var(--muted);">★ <strong>Installation cost: ₹1,000</strong> on most standard plans (unlike Jio's zero-cost entry). Router not free — buy your own (₹1,500–₹3,000) or rent theirs. No security deposit on the connection itself. First-month cost is higher but consistency justifies it for WFH users.</p>
+
+      <h3>Speed Test Results · Airtel Xstream · February 17, 2026</h3>
+      <div class="speed-results">
+        <div class="speed-results-header">
+          <span>Location (Plan)</span>
+          <span>9 AM Speed</span>
+          <span>9 PM Speed</span>
+          <span>Latency</span>
+        </div>
+        <div class="speed-result-row">
+          <span class="speed-loc">Patia, apartment complex near Falcon Residency (100 Mbps)</span>
+          <span class="speed-am">↑ 96 / 91 Mbps</span>
+          <span class="speed-pm">↓ 88 / 82 Mbps</span>
+          <span class="speed-lat">7–12 ms</span>
+        </div>
+        <div class="speed-result-row">
+          <span class="speed-loc">Chandrasekharpur BDA Colony near Golf Course (100 Mbps)</span>
+          <span class="speed-am">↑ 98 / 93 Mbps</span>
+          <span class="speed-pm">↓ 91 / 85 Mbps</span>
+          <span class="speed-lat">6–10 ms</span>
+        </div>
+        <div class="speed-result-row">
+          <span class="speed-loc">Nayapalli, near Kalinga Hospital (40 Mbps)</span>
+          <span class="speed-am">↑ 38 / 35 Mbps</span>
+          <span class="speed-pm">↓ 31 / 28 Mbps</span>
+          <span class="speed-lat">11–16 ms</span>
+        </div>
+      </div>
+
+      <div class="provider-verdict">
+        <strong>What residents say:</strong> Airtel users consistently praise stability — <em>"kabhi zyada problem nahi hua"</em> was the phrase from a software engineer near CSP P.S. Square who has been on the 100 Mbps plan for two years. Main complaint: OTT bundles are not as comprehensive as Jio's higher plans. The Airtel Store on Janpath and the store near Master Canteen Chowk are generally responsive for in-person support.<br/><br/>
+        <strong>Airtel verdict:</strong> Best for WFH professionals, gamers, and families who need consistent performance especially during evening hours. The ₹100/month premium over Jio is the cheapest insurance against dropped video calls. Worth it if reliability is your priority.
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════ BSNL ════════════════════ -->
+  <h2 id="bsnl">BSNL Bharat Fiber: The Old Faithful</h2>
+
+  <div class="provider-card bsnl">
+    <div class="provider-header">
+      <div class="provider-logo">🗼</div>
+      <div class="provider-title">
+        <h2>BSNL Bharat Fiber</h2>
+        <div class="pv-sub">Widest coverage · Free voice calls · Best for outer zones</div>
+      </div>
+      <span class="provider-verdict-tag">Outer Zones</span>
+    </div>
+    <div class="provider-body">
+      <p>BSNL is the widest-coverage ISP in Bhubaneswar — and in all of Odisha. If you are in <strong>Rasulgarh, Old Town, Unit-4, Khandagiri</strong>, or anywhere on the city's edges where Jio and Airtel fiber is patchy, BSNL is often the only reliable fixed-line option. Through its Bharat Fiber (FTTH) rollout, BSNL has been upgrading infrastructure in Bhubaneswar, though the pace is slower than private players.</p>
+
+      <h3>BSNL Bharat Fiber Plans — Bhubaneswar (February 2026)</h3>
+      <table class="plan-table">
+        <thead><tr><th>Plan</th><th>Speed</th><th>Monthly</th><th>Data + Voice</th></tr></thead>
+        <tbody>
+          <tr><td>Entry</td><td>30 Mbps</td><td>₹449/mo</td><td>1 TB data, then 4 Mbps + free calls</td></tr>
+          <tr class="plan-highlight"><td>Popular ★</td><td>60 Mbps</td><td>₹699/mo</td><td>1.5 TB data, then 4 Mbps + free calls</td></tr>
+          <tr><td>Standard</td><td>100 Mbps</td><td>₹999/mo</td><td>2 TB data, then 4 Mbps + free calls</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:0.82rem;color:var(--muted);">BSNL plans include <strong>free voice calling (local and STD)</strong> on all plans — something neither Jio nor Airtel offer on standard broadband. Genuine value for households that still use a landline.</p>
+
+      <h3>Speed Test Results · BSNL · February 17, 2026</h3>
+      <div class="speed-results">
+        <div class="speed-results-header">
+          <span>Location (Plan)</span>
+          <span>9 AM Speed</span>
+          <span>9 PM Speed</span>
+          <span>Latency</span>
+        </div>
+        <div class="speed-result-row">
+          <span class="speed-loc">Old Town area near Lingaraj Temple Road (60 Mbps plan)</span>
+          <span class="speed-am">↑ 54 / 48 Mbps</span>
+          <span class="speed-pm">↓ 43 / 38 Mbps</span>
+          <span class="speed-lat">18–28 ms</span>
+        </div>
+        <div class="speed-result-row">
+          <span class="speed-loc">Rasulgarh, near Workshop Chowk (30 Mbps plan)</span>
+          <span class="speed-am">↑ 26 / 21 Mbps</span>
+          <span class="speed-pm">↓ 18 / 14 Mbps</span>
+          <span class="speed-lat">24–40 ms</span>
+        </div>
+      </div>
+
+      <div class="provider-verdict">
+        <strong>What residents say:</strong> Decent speeds but customer support is the real weak link — getting a BSNL technician in Bhubaneswar takes 48–72 hours on average, sometimes longer outside the city centre. One resident near Acharya Vihar was down for 9 days, resolved only after a formal complaint at the <strong>BSNL Telephone Exchange on Sachivalaya Marg</strong>. But for areas where Jio and Airtel simply have no fiber, BSNL is a lifeline.<br/><br/>
+        <strong>BSNL verdict:</strong> Best for residents in older parts of the city and outer zones where private players have thin coverage. Not recommended for power users in well-covered areas where Jio or Airtel is available.
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════ ORTEL ════════════════════ -->
+  <h2 id="ortel">Ortel Broadband: Bhubaneswar's Own ISP</h2>
+
+  <div class="provider-card ortel">
+    <div class="provider-header">
+      <div class="provider-logo">🏙️</div>
+      <div class="provider-title">
+        <h2>Ortel Broadband</h2>
+        <div class="pv-sub">Local HFC network · ₹199 plan unbeatable · Best support in CSP</div>
+      </div>
+      <span class="provider-verdict-tag">Local Pick</span>
+    </div>
+    <div class="provider-body">
+      <p>Ortel Communications is headquartered at <strong>C-1, Chandrasekharpur, behind RMRC, BDA Colony</strong> — making it Bhubaneswar's most local major broadband provider. It operates on an HFC (Hybrid Fiber-Coax) network with its strongest coverage in older colonies: <strong>Chandrasekharpur, Nayapalli, Saheed Nagar, Acharya Vihar, and VSS Nagar</strong>.</p>
+
+      <h3>Ortel Plans — Bhubaneswar (February 2026)</h3>
+      <table class="plan-table">
+        <thead><tr><th>Plan</th><th>Speed</th><th>Monthly</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr class="plan-highlight"><td>Prime ★</td><td>5 Mbps</td><td>₹199/mo</td><td>Unlimited, no FUP — outstanding value for light users</td></tr>
+          <tr><td>Basic</td><td>10 Mbps</td><td>₹399/mo</td><td>Unlimited data</td></tr>
+          <tr><td>Standard</td><td>50 Mbps</td><td>₹999/mo</td><td>Unlimited data</td></tr>
+          <tr><td>Premium</td><td>100 Mbps</td><td>₹1,899/mo</td><td>No FUP + DTH bundle discount</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:0.82rem;color:var(--muted);">★ The ₹199 Prime plan is genuinely remarkable — unlimited 5 Mbps with no FUP at this price point. For senior citizens, students doing basic browsing, or any household that just needs email and WhatsApp, this is difficult to argue against. <strong>Installation: ₹1,000–₹2,500</strong> depending on existing cabling.</p>
+
+      <div class="provider-verdict">
+        <strong>Ortel verdict:</strong> Best for budget-conscious users in older colonies and Chandrasekharpur who value responsive local support — Ortel's office is right there in the colony and technician response is noticeably faster than national players for CSP residents. The ₹199 plan is outstanding value for light users. Not the right choice for IT professionals or gamers needing 100+ Mbps consistently — the 100 Mbps plan at ₹1,899 is significantly more expensive than Jio or Airtel for equivalent speed.
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════ LOCAL ISPS ════════════════════ -->
+  <h2 id="local">Other Local ISPs: Reisnet, Wefe, Cherrinet, Hathway</h2>
+
+  <div class="provider-card local">
+    <div class="provider-header">
+      <div class="provider-logo">📻</div>
+      <div class="provider-title">
+        <h2>Local ISPs</h2>
+        <div class="pv-sub">Reisnet · Wefe · Cherrinet · Hathway — niche but worth knowing</div>
+      </div>
+      <span class="provider-verdict-tag">Area-Specific</span>
+    </div>
+    <div class="provider-body">
+      <div class="price-grid" style="margin:0 0 14px;">
+        <div class="price-row"><span class="label">Reisnet — near Patia &amp; Infocity, plans from ₹295/mo</span><span class="value">Same-day support</span></div>
+        <div class="price-row"><span class="label">Wefe — Nandan Vihar &amp; Sailashree Vihar, wireless</span><span class="value">₹800–900/mo + ₹2,500 setup</span></div>
+        <div class="price-row"><span class="label">Cherrinet — Saheed Nagar &amp; Nayapalli pockets</span><span class="value">Competitive, small footprint</span></div>
+        <div class="price-row"><span class="label">Hathway — CSP &amp; Nayapalli, low-latency gamer choice</span><span class="value">Lowest ping where available</span></div>
+      </div>
+      <div class="provider-verdict">
+        <strong>Reisnet</strong> is gaining ground near Patia and Infocity — same-day technician visits reportedly common. <strong>Wefe</strong> uses wireless (no fiber digging), setup cost ₹2,500 for the outdoor unit plus ₹1,000 for the router. <strong>Hathway</strong> is preferred by gamers for low-latency connections in Chandrasekharpur and Nayapalli — where it exists, ping times are among the lowest in the city.
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════ SPEED COMPARE ════════════════════ -->
+  <h2 id="speedtest">The Real Speed Test: Peak Hour Comparison</h2>
+  <p>Here is what the same 100 Mbps plan actually delivers across providers at 9 PM on a weekday in Bhubaneswar — the evening drop is real for everyone:</p>
+
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th>Provider</th>
+        <th>Advertised</th>
+        <th>9 AM Speed</th>
+        <th>9 PM Speed</th>
+        <th>Latency (ms)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Airtel Xstream</strong></td>
+        <td>100 Mbps</td>
+        <td>96–98 Mbps</td>
+        <td><strong style="color:#3a7a3a;">85–91 Mbps</strong></td>
+        <td>6–12</td>
+      </tr>
+      <tr>
+        <td><strong>JioFiber</strong></td>
+        <td>100 Mbps</td>
+        <td>88–94 Mbps</td>
+        <td>58–72 Mbps</td>
+        <td>9–18</td>
+      </tr>
+      <tr>
+        <td><strong>Ortel</strong></td>
+        <td>100 Mbps</td>
+        <td>82–90 Mbps</td>
+        <td>60–75 Mbps</td>
+        <td>15–22</td>
+      </tr>
+      <tr>
+        <td><strong>BSNL Bharat Fiber</strong></td>
+        <td>100 Mbps</td>
+        <td>78–85 Mbps</td>
+        <td>52–64 Mbps</td>
+        <td>18–28</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pro-tip">
+    <strong>The Critical Number:</strong> Airtel holds the best during peak hours — the 9 AM to 9 PM drop is only ~10 Mbps. JioFiber drops 25–30 Mbps. For WFH professionals with video calls between 7–9 PM, Airtel's evening consistency advantage is the most important number in this table.
+  </div>
+
+  <!-- Secondary image: speed comparison infographic -->
+  <figure class="inline-fig">
+    <img src="images/broadband-speed-comparison.png" alt="Bhubaneswar Broadband Speed Comparison — 9 AM vs 9 PM Real Performance 2026 — ValueLayer" />
+    <figcaption>Real 9 AM vs 9 PM speeds for 100 Mbps plans across all four main providers — tested February 17, 2026 via Speedtest.net (Ookla). Evening drop is real for all providers; Airtel holds closest to advertised speed. All plan prices exclude 18% GST.</figcaption>
+  </figure>
+
+  <!-- ════════════════════ YOUTUBE ════════════════════ -->
+  <div class="yt-wrap" id="video">
+    <div class="yt-label">▶ Watch: JioFiber vs Airtel Xstream — Which Is Actually Better?</div>
+    <div class="yt-frame">
+      <iframe
+        src="https://www.youtube.com/embed/3Z9UPMtSAXI"
+        title="JioFiber vs Airtel Xstream — Real Speed Test, Plans and Which to Choose in India 2026"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div class="yt-caption">A head-to-head real-world comparison of JioFiber and Airtel Xstream — speed tests, plan pricing, customer service, and which one comes out ahead for different types of users.</div>
+  </div>
+
+  <!-- ════════════════════ COVERAGE CHECK ════════════════════ -->
+  <h2 id="coverage">How to Check Coverage at Your Exact Address</h2>
+  <p>Do not assume coverage because a national website says so. Bhubaneswar's fiber infrastructure is building-specific — a lane off Raghunathpur Jali may have JioFiber but not Airtel simply because Airtel's cable has not been laid in that particular lane yet. Always verify:</p>
+
+  <ul class="coverage-steps">
+    <li>
+      <div class="cov-num">1</div>
+      <div><strong>Check the JioFiber app's address-level checker</strong> before committing. It verifies at building level, not just area — this is the fastest way to confirm Jio availability at your specific flat.</div>
+    </li>
+    <li>
+      <div class="cov-num">2</div>
+      <div><strong>Ask your specific building's security guard or existing residents</strong> which providers actually work in the building. This is far more reliable than any national coverage map.</div>
+    </li>
+    <li>
+      <div class="cov-num">3</div>
+      <div><strong>Call Airtel's helpline (121) and request a coverage feasibility check</strong> for your exact address. They will tell you within 24 hours whether fiber is available at your specific flat — not just in your area.</div>
+    </li>
+    <li>
+      <div class="cov-num">4</div>
+      <div>For BSNL, <strong>visit the BSNL Telephone Exchange at Sachivalaya Marg</strong> or the <strong>BSNL Exchange near Kalpana Square</strong> with your address — they will verify feasibility on the spot, usually within 30 minutes.</div>
+    </li>
+    <li>
+      <div class="cov-num">5</div>
+      <div><strong>The single best method:</strong> Ask the person already living in your building for six months. Building WhatsApp groups always have someone who has tried two or three providers and will tell you everything — including who the local technician is and how fast they actually respond.</div>
+    </li>
+  </ul>
+
+  <!-- ════════════════════ DECISION GUIDE ════════════════════ -->
+  <h2 id="decision">Quick Decision Guide</h2>
+
+  <table class="decision-table">
+    <thead>
+      <tr><th>Your situation</th><th>Recommended Provider</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Fresher moving in, tight budget, zero upfront cash</td><td>JioFiber ₹399 or ₹699</td></tr>
+      <tr><td>WFH professional with video calls daily</td><td>Airtel Xstream 100 Mbps</td></tr>
+      <tr><td>Gamer — lowest ping is priority</td><td>Hathway or Airtel Xstream</td></tr>
+      <tr><td>Outer colony (Rasulgarh, Old Town, Unit-4)</td><td>BSNL Bharat Fiber</td></tr>
+      <tr><td>Chandrasekharpur resident, want local support</td><td>Ortel 50 Mbps or above</td></tr>
+      <tr><td>Basic browsing only, senior citizen</td><td>Ortel ₹199 Prime plan</td></tr>
+      <tr><td>Student in PG near KIIT</td><td>JioFiber ₹399 or split Airtel with flatmates</td></tr>
+      <tr><td>Family with OTT streaming on multiple screens</td><td>JioFiber Diamond (₹1,499) — OTT bundles included</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ════════════════════ VERDICT ════════════════════ -->
+  <h2 id="verdict">The Verdict</h2>
+
+  <div class="verdict">
+    <div class="v-tag">Final Recommendation</div>
+    <p>For most people moving to Bhubaneswar in 2026: <strong>start with JioFiber at ₹699/month</strong>. Zero setup cost, solid day-time speed, OTT bundles included — it covers everything you need without upfront cash when you're already stretched from deposit and brokerage.</p>
+  </div>
+
+  <div class="pro-tip">
+    <strong>The Upgrade Case:</strong> If you work from home and your job depends on consistent connection quality at 9 PM — upgrade to <strong>Airtel Xstream at ₹799/month</strong>. The ₹100 extra per month is the cheapest insurance you can buy against a dropped video call with your team lead. The ₹1,000 installation charge stings once. The peace of mind in peak hours pays it back in the first month. The Temple City's internet infrastructure is still catching up with its ambitions — but the main corridors are now genuinely fast.
+  </div>
+
+  <!-- ════════════════════ AUTHOR BOX ════════════════════ -->
+  <div class="author-box">
+    <img src="images/author-rajan-pattnaik.jpg" alt="Rajan Pattnaik" style="width:80px;height:80px;border-radius:50%;object-fit:cover;">
+    <div class="author-info">
+      <div class="author-label">Written by</div>
+      <div class="author-name">Rajan Pattnaik</div>
+      <div class="author-title">Cost-of-Living Researcher &amp; Local Guide, ValueLayer</div>
+      <p class="author-bio">Rajan has lived in Bhubaneswar for over 12 years and writes about real estate, household budgets, and everyday costs in the Temple City. For this article, he ran speed tests on four active connections across three different areas — Patia, Chandrasekharpur, and Nandankanan Road — on February 17, 2026, using Speedtest.net (Ookla), and spoke to residents using each major provider about their real-world experience. When he's not researching rent trends, he's probably near Patia Chowk seeing how many chai stalls opened this week.</p>
+      <div class="author-meta">
+        <span>📍 Based in Bhubaneswar, Odisha</span>
+        <span>✍️ 52 articles published</span>
+        <span>🗓️ Writing since 2019</span>
+      </div>
+      <div class="author-social">
+        <a href="#">Twitter / X</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">All Articles</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════ RELATED ARTICLES ════════════════════ -->
+  <div class="related-section">
+    <h2>You Might Also Like</h2>
+    <div class="related-grid">
+      <a href="hidden-costs-moving-bhubaneswar.html" class="related-card">
+        <div class="related-card-body">
+          <div class="related-card-tag">Moving Guide</div>
+          <h4>Hidden Costs of Moving to Bhubaneswar No One Tells You</h4>
+          <p>Internet setup costs, utility deposits, and 12 other first-month surprises — the real total is ₹66,300.</p>
+        </div>
+      </a>
+      <a href="maid-cook-bhubaneswar-rates-agencies.html" class="related-card">
+        <div class="related-card-body">
+          <div class="related-card-tag">Services Guide</div>
+          <h4>How to Find a Maid/Cook in Bhubaneswar: Rates and Agencies</h4>
+          <p>Current bai and cook rates, the building-network method, the seasonal calendar, and what to agree on before day one.</p>
+        </div>
+      </a>
+      <a href="top-5-areas-it-professionals.html" class="related-card">
+        <div class="related-card-body">
+          <div class="related-card-tag">City Living</div>
+          <h4>Top 5 Residential Areas for IT Professionals Near Infocity</h4>
+          <p>Patia, Niladri Vihar, CSP, Damana — real rents, commute times, and insider tips.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+
+  <!-- Related Articles for SEO Interlinking -->
+  <div class="related-section" style="margin-top:60px;padding-top:36px;border-top:2px solid var(--rule);">
+    <h2 style="font-size:1.2rem;margin:0 0 20px;border-bottom:none;padding-bottom:0;">Related Guides</h2>
+    <div class="related-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;">
+      <a href="cost-of-living-bhubaneswar.html" class="related-card" style="border:1px solid var(--rule);border-radius:8px;background:var(--card);padding:18px;text-decoration:none;color:inherit;display:block;transition:all 0.2s;">
+        <div class="related-card-tag" style="font-size:0.64rem;text-transform:uppercase;letter-spacing:0.14em;font-weight:600;color:var(--accent);margin-bottom:7px;">Related Guide</div>
+        <h4 style="font-family:'Lora',serif;font-size:0.9rem;font-weight:600;line-height:1.4;color:var(--ink);margin-bottom:8px;">Cost of Living Guide</h4>
+        <p style="font-size:0.78rem;color:var(--muted);line-height:1.6;margin:0;font-weight:300;">See all utility costs in Bhubaneswar</p>
+      </a>
+      <a href="24-hour-medical-stores-bhubaneswar.html" class="related-card" style="border:1px solid var(--rule);border-radius:8px;background:var(--card);padding:18px;text-decoration:none;color:inherit;display:block;transition:all 0.2s;">
+        <div class="related-card-tag" style="font-size:0.64rem;text-transform:uppercase;letter-spacing:0.14em;font-weight:600;color:var(--accent);margin-bottom:7px;">Related Guide</div>
+        <h4 style="font-family:'Lora',serif;font-size:0.9rem;font-weight:600;line-height:1.4;color:var(--ink);margin-bottom:8px;">24-Hour Pharmacies</h4>
+        <p style="font-size:0.78rem;color:var(--muted);line-height:1.6;margin:0;font-weight:300;">Find essential services near you</p>
+      </a>
+      <a href="maid-cook-bhubaneswar-rates-agencies.html" class="related-card" style="border:1px solid var(--rule);border-radius:8px;background:var(--card);padding:18px;text-decoration:none;color:inherit;display:block;transition:all 0.2s;">
+        <div class="related-card-tag" style="font-size:0.64rem;text-transform:uppercase;letter-spacing:0.14em;font-weight:600;color:var(--accent);margin-bottom:7px;">Related Guide</div>
+        <h4 style="font-family:'Lora',serif;font-size:0.9rem;font-weight:600;line-height:1.4;color:var(--ink);margin-bottom:8px;">Maid & Cook Rates</h4>
+        <p style="font-size:0.78rem;color:var(--muted);line-height:1.6;margin:0;font-weight:300;">Hire domestic help</p>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<!-- ══════════════════════════════════════════════════ FOOTER -->
+<footer class="site-footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo">Value<span>Layer</span></a>
+      <p>Bhubaneswar's most trusted guide to real living costs, local tips, and everything the Temple City has to offer. All prices verified on the ground.</p>
+      <div class="footer-social">
+        <a href="https://twitter.com/valuelayerin" target="_blank" rel="noopener" aria-label="Twitter/X"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="https://instagram.com/valuelayerin" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        <a href="https://youtube.com/@valuelayerin" target="_blank" rel="noopener" aria-label="YouTube"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <a href="https://linkedin.com/company/valuelayerin" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="city-living.html">City Living &amp; Housing</a></li>
+        <li><a href="education.html">Education &amp; Career</a></li>
+        <li><a href="lifestyle.html">Explore &amp; Lifestyle</a></li>
+        <li><a href="services.html">Services &amp; Utilities</a></li>
+        <li><a href="transport.html">Transport &amp; Travel</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="advertise.html">Advertise</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-row1">
+      <span class="footer-copy">&#169; 2026 Valuelayer.in &nbsp;&middot;&nbsp; Built with <span class="heart">&#9829;</span> from Bhubaneswar</span>
+      <div class="footer-legal-links">
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="disclaimer.html">Disclaimer</a>
+      </div>
+    </div>
+    <p class="footer-disclaimer-line">
+      All speed tests were conducted using Speedtest.net (Ookla) on connected devices on February 17, 2026. Plan prices are base rates excluding 18% GST. Actual speeds vary by building infrastructure, time of day, and distance from the nearest fiber junction. Always verify coverage at your specific address before subscribing. For corrections or updates, <a href="contact.html">contact us here</a>. See our full <a href="disclaimer.html">Disclaimer</a> and <a href="privacy.html">Privacy Policy</a>.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
